@@ -41,7 +41,20 @@
   color: #888;
 } */
 
-img {
-  width: 100%;
-  max-width: 100%;
+/****************
+* CHECKER BOARD *
+*****************/
+.checker-board {
+  display: flex;
+  flex-direction: column;
+}
+
+.checker-board > div {
+  flex: 1; /* fill space */
+}
+
+@media screen and (min-width: 1024px) {
+  .checker-board {
+    flex-direction: row;
+  }
 }

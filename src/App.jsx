@@ -6,9 +6,11 @@ import Projects from "./components/layout/projects/Projects";
 function App() {
   return (
     <>
-      <Hero />
-      <About />
-      <Projects />
+      <main>
+        <Hero />
+        <About />
+        <Projects />
+      </main>
     </>
   );
 }
