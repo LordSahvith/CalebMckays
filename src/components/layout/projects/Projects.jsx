@@ -1,7 +1,9 @@
+import "./Projects.css";
 import HeroImage from "/images/Hero-Image-Mobile.jpg";
+
 function Projects() {
   return (
-    <section>
+    <section className="projects">
       <div>
         <h2>Projects</h2>
         <p>

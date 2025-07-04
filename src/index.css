@@ -69,7 +69,7 @@ button:focus-visible {
 
 /*******************
 * DEFAULT ELEMENTS *
-********************/
+*******************/
 * {
   padding: 0;
   margin: 0;
@@ -77,9 +77,10 @@ button:focus-visible {
 }
 
 html {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "ltc-goudy-thirty", Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  font-style: normal;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -91,8 +92,31 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/******************
-* LAYOUT ELEMENTS *
+/****************
+* TEXT ELEMENTS *
+****************/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "uppercut-angle", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1 {
+  font-size: 45px;
+  line-height: 1;
+}
+
+p {
+  font-size: 18px;
+}
+
+/*******************
+* LAYOUT & SPACING *
 *******************/
 section {
   padding: 15px;
@@ -106,32 +130,6 @@ div + div {
   margin-top: 10px;
 }
 
-/*****************
-* IMAGE ELEMENTS *
-******************/
-img {
-  width: 100%;
-  max-width: 100%;
-}
-
-/****************
-* TEXT ELEMENTS *
-*****************/
-h1 {
-  font-size: 40px;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "uppercut-angle", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
 /* 
 add spacing BETWEEN paragraphs (first doesn't get any)
 and let the other text & parents elements handle their 
@@ -139,4 +137,12 @@ own spacing
 */
 p + p {
   margin-top: 10px;
+}
+
+/*****************
+* IMAGE ELEMENTS *
+*****************/
+img {
+  width: 100%;
+  max-width: 100%;
 }
