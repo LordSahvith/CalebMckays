@@ -1,12 +1,18 @@
 function ProjectTemplate({ projects }) {
   return projects.map((project) => (
-    <div className="project" key={project.title}>
+    <div className="project checker-board" key={project.title}>
       <div>
-        <h4>{project.title}</h4>
+        <h4>
+          <a href={project.url} target="_blank">
+            {project.title}
+          </a>
+        </h4>
         <p>{project.content}</p>
       </div>
       <div>
-        <img src={project.image.HeroImage} alt={project.image.alt} />
+        <a href={project.url} target="_blank">
+          <img src={project.image.src} alt={project.image.alt} />
+        </a>
       </div>
     </div>
   ));

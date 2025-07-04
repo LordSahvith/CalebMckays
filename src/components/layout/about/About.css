@@ -2,17 +2,3 @@
   width: 100%;
   max-width: 100%;
 }
-
-@media screen and (min-width: 1024px) {
-  .about-text {
-    order: 1;
-    margin-left: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .about-image {
-    order: 0;
-  }
-}
