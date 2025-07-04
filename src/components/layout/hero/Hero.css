@@ -1,0 +1,22 @@
+.hero {
+  background-color: #d40000;
+  width: 100%;
+  max-width: 100%;
+  min-height: 33vh;
+  max-height: 50vh;
+}
+
+.hero-text,
+.hero-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-image {
+  align-items: center;
+}
+
+.hero-image img {
+  max-width: 50%;
+}
