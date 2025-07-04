@@ -1,3 +1,10 @@
-.projects {
+.projects-section {
   background-color: #353434;
+}
+
+.project-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }

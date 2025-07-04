@@ -47,6 +47,8 @@
 .checker-board {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .checker-board > div {
@@ -57,4 +59,58 @@
   .checker-board {
     flex-direction: row;
   }
+
+  .checker-board > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .checker-board:nth-child(odd) > div:nth-child(odd) {
+    margin-right: 20px;
+  }
+
+  .checker-board:nth-child(even) > div:nth-child(odd) {
+    order: 1;
+    margin-left: 20px;
+  }
+
+  .checker-board:nth-child(even) > div:nth-child(even) {
+    order: 0;
+  }
+}
+
+/**************
+*   Buttons   *
+**************/
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 15px;
+  background-color: #d40000;
+  border: none;
+  line-height: 1;
+}
+
+button:hover {
+  background-color: #c50035;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in;
+}
+
+/**************
+*    Links    *
+**************/
+a {
+  color: #d40000;
+}
+
+a:hover {
+  color: #c50035;
+  cursor: pointer;
+}
+
+a:visited {
+  color: #a800a0;
 }

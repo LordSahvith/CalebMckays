@@ -3,11 +3,11 @@ import { personalProjects } from "./data/projects";
 
 function PersonalProjects() {
   return (
-    <div>
+    <>
       <h3>Personal</h3>
 
       <ProjectTemplate projects={personalProjects} />
-    </div>
+    </>
   );
 }
 
