@@ -57,6 +57,7 @@ function ParticleCanvas() {
       particles.push(new Particle(x, y, size, color, velocityX, velocityY));
     }
 
+    // connect particles with a line
     function connect() {
       let opacityValue = 1;
       for (const particleA of particles) {
@@ -87,8 +88,8 @@ function ParticleCanvas() {
         particle.draw();
       });
 
-      requestAnimationFrame(animate);
       connect();
+      requestAnimationFrame(animate);
     }
 
     animate();
