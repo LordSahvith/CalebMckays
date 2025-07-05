@@ -3,10 +3,12 @@
   max-width: 100%;
   height: 100vh;
   align-items: flex-start;
+  position: relative;
 }
 
 .hero.checker-board {
-  background-color: #d40000;
+  background-color: #000000;
+  /* background-color: #d40000; */
 }
 
 .hero-text,
@@ -15,6 +17,14 @@
   flex-direction: column;
   justify-content: center;
   z-index: 1;
+}
+
+.hero-text > * {
+  line-height: 1;
+}
+
+.hero-text h1 {
+  margin: 10px 0 13px;
 }
 
 .hero-image {
