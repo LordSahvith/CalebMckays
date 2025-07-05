@@ -1,5 +1,6 @@
+import ParticleCanvas from "../../particles/ParticlesSystem";
 import "./Hero.css";
-import HeroImage from "/images/Hero-Image-Mobile.jpg";
+import MyImage from "/images/personal-pic.png";
 
 function Hero() {
   return (
@@ -10,8 +11,9 @@ function Hero() {
         <p>A Full Stack Developer & Engineer</p>
       </div>
       <div className="hero-image">
-        <img src={HeroImage} alt="Hero image placeholder" />
+        <img src={MyImage} alt="Hero image placeholder" />
       </div>
+      <ParticleCanvas />
     </section>
   );
 }

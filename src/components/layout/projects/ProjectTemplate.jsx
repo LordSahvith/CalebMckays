@@ -1,6 +1,6 @@
 function ProjectTemplate({ projects }) {
   return projects.map((project) => (
-    <div className="project checker-board" key={project.title}>
+    <section className="project checker-board" key={project.title}>
       <div>
         <h4>
           <a href={project.url} target="_blank">
@@ -14,7 +14,7 @@ function ProjectTemplate({ projects }) {
           <img src={project.image.src} alt={project.image.alt} />
         </a>
       </div>
-    </div>
+    </section>
   ));
 }
 

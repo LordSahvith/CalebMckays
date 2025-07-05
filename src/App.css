@@ -51,6 +51,10 @@
   align-items: center;
 }
 
+.checker-board:nth-child(odd) {
+  background-color: #242424;
+}
+
 .checker-board > div {
   flex: 1; /* fill space */
 }
@@ -58,12 +62,14 @@
 @media screen and (min-width: 1024px) {
   .checker-board {
     flex-direction: row;
+    padding: 15px;
   }
 
   .checker-board > div {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    flex: 1;
   }
 
   .checker-board:nth-child(odd) > div:nth-child(odd) {

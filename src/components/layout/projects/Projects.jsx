@@ -3,8 +3,8 @@ import PersonalProjects from "./Personal";
 import ProfessionalProjects from "./Professional";
 import { useState } from "react";
 
-const PROFESSIONAL_TEXT = "professional";
-const PERSONAL_TEXT = "personal";
+const PROFESSIONAL_TEXT = "Professional";
+const PERSONAL_TEXT = "Personal";
 
 function Projects() {
   const [projectType, setProjectType] = useState(PROFESSIONAL_TEXT);
@@ -15,7 +15,7 @@ function Projects() {
 
   return (
     <section className="projects-section">
-      <div>
+      <div className="projects-text">
         <h2>Projects</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quis
@@ -28,9 +28,11 @@ function Projects() {
       <div className="projects">
         <div className="project-buttons">
           <button onClick={() => toggleProject(PROFESSIONAL_TEXT)}>
-            Professional
+            {PROFESSIONAL_TEXT}
           </button>
-          <button onClick={() => toggleProject(PERSONAL_TEXT)}>Personal</button>
+          <button onClick={() => toggleProject(PERSONAL_TEXT)}>
+            {PERSONAL_TEXT}
+          </button>
         </div>
 
         {projectType === PROFESSIONAL_TEXT ? (
