@@ -4,6 +4,7 @@ import HeroImage from "/images/Hero-Image-Mobile.jpg";
 function Hero() {
   return (
     <section className="hero checker-board">
+      <canvas id="hero-particles"></canvas>
       <div className="hero-text">
         <p>Hello, my name is</p>
         <h1>Caleb Anderson</h1>
