@@ -1,12 +1,14 @@
 .hero {
-  background-color: #d40000;
   /* background-color: black; */
-  width: 100%;
+  width: 100vw;
   max-width: 100%;
-  min-height: 33vh;
-  max-height: 50vh;
+  height: 100vh;
   align-items: flex-start;
   position: relative;
+}
+
+.hero.checker-board {
+  background-color: #d40000;
 }
 
 .hero-text,
@@ -23,15 +25,6 @@
 
 .hero-image img {
   max-width: 50%;
-}
-
-#hero-particles {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
 }
 
 @media screen and (min-width: 1024px) {
