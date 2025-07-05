@@ -72,16 +72,16 @@
     flex: 1;
   }
 
-  .checker-board:nth-child(even) > div:nth-child(odd) {
+  .checker-board:nth-child(odd) > div:nth-child(odd) {
     margin-right: 20px;
   }
 
-  .checker-board:nth-child(odd) > div:nth-child(odd) {
+  .checker-board:nth-child(even) > div:nth-child(odd) {
     order: 1;
     margin-left: 20px;
   }
 
-  .checker-board:nth-child(odd) > div:nth-child(even) {
+  .checker-board:nth-child(even) > div:nth-child(even) {
     order: 0;
   }
 }

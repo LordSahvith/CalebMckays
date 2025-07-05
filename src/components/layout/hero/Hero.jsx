@@ -1,3 +1,4 @@
+import ParticleCanvas from "../../particles/ParticlesSystem";
 import "./Hero.css";
 import MyImage from "/images/personal-pic.png";
 
@@ -12,6 +13,7 @@ function Hero() {
       <div className="hero-image">
         <img src={MyImage} alt="Hero image placeholder" />
       </div>
+      <ParticleCanvas />
     </section>
   );
 }
