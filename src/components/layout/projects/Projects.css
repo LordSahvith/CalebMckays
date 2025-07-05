@@ -6,6 +6,11 @@
   margin-bottom: 20px;
 }
 
+.projects h3 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
 .project-buttons {
   display: flex;
   justify-content: center;
@@ -16,6 +21,6 @@
   margin-bottom: 20px;
 }
 
-.projects h3 {
-  text-align: center;
+.project-buttons button {
+  color: rgba(255, 255, 255, 0.8);
 }
