@@ -1,9 +1,11 @@
 .hero {
   background-color: #d40000;
+  /* background-color: black; */
   width: 100%;
   max-width: 100%;
   min-height: 33vh;
   max-height: 50vh;
+  align-items: flex-start;
 }
 
 .hero-text,
@@ -19,4 +21,10 @@
 
 .hero-image img {
   max-width: 50%;
+}
+
+@media screen and (min-width: 1024px) {
+  .hero {
+    align-items: center;
+  }
 }

@@ -2,9 +2,20 @@
   background-color: #353434;
 }
 
+.projects-text {
+  margin-bottom: 20px;
+}
+
 .project-buttons {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid;
+  margin-bottom: 20px;
+}
+
+.projects h3 {
+  text-align: center;
 }

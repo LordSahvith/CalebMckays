@@ -119,7 +119,13 @@ p {
 * LAYOUT & SPACING *
 *******************/
 section {
-  padding: 15px;
+  padding: 20px;
+}
+
+@media screen and (min-width: 1024px) {
+  section {
+    padding: 40px;
+  }
 }
 
 /* 
