@@ -1,5 +1,5 @@
 import "./Projects.css";
-import ProjectsCarousel from "../../carousel/Projects-Carousel";
+import ProjectsCarousel from "./Projects-Carousel";
 
 function Projects() {
   return (

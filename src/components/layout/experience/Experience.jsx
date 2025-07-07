@@ -1,11 +1,12 @@
 import experienceData from "./data/experience";
 
-function ExperienceSection() {
+function Experience() {
   return (
     <>
       <h3>Professional</h3>
+
       {experienceData.map((job) => (
-        <section className="job checker-board" key={job.title}>
+        <section className="job" key={job.title}>
           <div>
             <h4>
               <a href={job.url} target="_blank">
@@ -20,4 +21,4 @@ function ExperienceSection() {
   );
 }
 
-export default ExperienceSection;
+export default Experience;

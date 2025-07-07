@@ -1,6 +1,6 @@
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
-import projects from "../layout/projects/data/projects";
+import projects from "./data/projects";
 
 // import MobileImage from "/images/Hero-Image-Mobile.jpg";
 
