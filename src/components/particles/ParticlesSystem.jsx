@@ -47,7 +47,7 @@ function ParticleCanvas() {
 
     // Initialize particles
     for (let i = 0; i < particleCount; i++) {
-      const size = Math.random() * 5 + 1;
+      const size = Math.random() * 3 + 2;
       const x = Math.random() * (innerWidth - size * 2 - size * 2) + size * 2;
       const y = Math.random() * (innerHeight - size * 2 - size * 2) + size * 2;
       const color = `rgba(75, 0, 0, ${Math.random()})`;
