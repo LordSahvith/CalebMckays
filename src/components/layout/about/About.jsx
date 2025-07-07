@@ -9,7 +9,7 @@ function About() {
   const eCommerceYears = currentYear - timeAway - 2021;
 
   return (
-    <section className="about checker-board">
+    <section className="about">
       <div className="about-text">
         <h2>About</h2>
         <p>
@@ -34,10 +34,6 @@ function About() {
           (billiards), outdoors, like: hiking, camping, and snowboarding, and of
           course video games.
         </p>
-      </div>
-
-      <div className="about-image">
-        <img src={HeroImage} alt="About image placeholder" />
       </div>
     </section>
   );

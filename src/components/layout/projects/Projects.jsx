@@ -1,5 +1,5 @@
 import "./Projects.css";
-import PersonalProjects from "./Personal";
+import ProjectsCarousel from "../../carousel/Projects-Carousel";
 
 function Projects() {
   return (
@@ -15,7 +15,7 @@ function Projects() {
       </div>
 
       <div className="projects">
-        <PersonalProjects />
+        <ProjectsCarousel />
       </div>
     </section>
   );
