@@ -1,0 +1,26 @@
+.projects-section {
+  background-color: #353434;
+}
+
+.projects-text {
+  margin-bottom: 20px;
+}
+
+.projects h3 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.project-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid;
+  margin-bottom: 20px;
+}
+
+.project-buttons button {
+  color: rgba(255, 255, 255, 0.8);
+}

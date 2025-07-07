@@ -1,4 +1,5 @@
 import experienceData from "./data/experience";
+import "./Experience.css";
 
 function Experience() {
   return (
