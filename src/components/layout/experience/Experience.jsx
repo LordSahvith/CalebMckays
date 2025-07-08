@@ -7,14 +7,21 @@ function Experience() {
       <h3>Experience</h3>
 
       {experienceData.map((job) => (
-        <div className="job" key={job.title}>
+        <div className="job" key={job.id}>
           <div>
             <h4>
               <a href={job.url} target="_blank">
-                {job.title}
+                {job.job}
               </a>
             </h4>
-            <p>{job.content}</p>
+            <p>{job.duration}</p>
+            <p>{job.title}</p>
+            <p>{job.content.description}</p>
+            <ul>
+              {job.content.duties.map((duty) => (
+                <li>{duty}</li>
+              ))}
+            </ul>
           </div>
         </div>
       ))}
