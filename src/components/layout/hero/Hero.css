@@ -35,6 +35,17 @@
   margin: 10px 0 13px;
 }
 
+.hero-code {
+  margin-top: 20px;
+}
+
+.hero-code code {
+  margin: 25px 10px;
+  font-size: 40px;
+  color: #8fa0da;
+  font-weight: bold;
+}
+
 @media screen and (min-width: 1024px) {
   .hero {
     align-items: center;
