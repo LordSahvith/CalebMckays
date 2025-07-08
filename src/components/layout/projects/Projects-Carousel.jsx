@@ -8,7 +8,7 @@ function ProjectsCarousel() {
   return (
     <Carousel showThumbs={false}>
       {projects.map((project) => (
-        <section className="project" key={project.title}>
+        <div className="project" key={project.title}>
           <div>
             <h4>
               <a href={project.url} target="_blank">
@@ -22,7 +22,7 @@ function ProjectsCarousel() {
               <img src={project.image.src} alt={project.image.alt} />
             </a>
           </div>
-        </section>
+        </div>
       ))}
     </Carousel>
   );

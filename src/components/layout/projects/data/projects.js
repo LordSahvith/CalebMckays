@@ -3,7 +3,7 @@ import GreenPigFoodImage from "/images/projects/green-pig-pub/food-menu-table-vi
 
 const projects = [
   {
-    title: "The Green Pig Pub (Freelance)",
+    title: "The Green Pig Pub",
     content:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta at ad possimus soluta velit voluptatum commodi id. In aspernatur repudiandae, fuga velit obcaecati laboriosam culpa dolorem nobis molestiae itaque dignissimos? ",
     image: {
@@ -13,7 +13,7 @@ const projects = [
     url: "https://lordsahvith.github.io/green-pig-pub/index.html",
   },
   {
-    title: "Yu-Gi-Oh Card Collector",
+    title: "Yu-Gi-Oh Card Collector (Personal Project)",
     content:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta at ad possimus soluta velit voluptatum commodi id. In aspernatur repudiandae, fuga velit obcaecati laboriosam culpa dolorem nobis molestiae itaque dignissimos? ",
     image: {
