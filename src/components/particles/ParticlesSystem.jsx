@@ -1,8 +1,13 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import "./Particles.css";
 
 function ParticleCanvas() {
   const canvasRef = useRef(null);
+
+  const [windowSize, setWindowSize] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight,
+  });
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -47,7 +52,7 @@ function ParticleCanvas() {
 
     // Initialize particles
     for (let i = 0; i < particleCount; i++) {
-      const size = Math.random() * 3 + 2;
+      const size = Math.random() * 3;
       const x = Math.random() * (innerWidth - size * 2 - size * 2) + size * 2;
       const y = Math.random() * (innerHeight - size * 2 - size * 2) + size * 2;
       const color = `rgba(75, 0, 0, ${Math.random()})`;
@@ -92,11 +97,23 @@ function ParticleCanvas() {
       requestAnimationFrame(animate);
     }
 
+    const handleResize = () => {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    };
+
+    window.addEventListener("resize", handleResize);
+
     animate();
 
     // Cleanup on component unmount
     return () => {
       cancelAnimationFrame(animate);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
