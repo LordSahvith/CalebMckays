@@ -9,7 +9,7 @@ function About() {
   const eCommerceYears = currentYear - timeAway - 2021;
 
   return (
-    <section className="about checker-board">
+    <section id="about" className="about checker-board">
       <div className="about-text">
         <h2>About</h2>
         <p>

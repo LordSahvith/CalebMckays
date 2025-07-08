@@ -115,7 +115,7 @@ function ParticleCanvas() {
       cancelAnimationFrame(animate);
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  }, [windowSize]);
 
   return <canvas className="particles-canvas" ref={canvasRef} />;
 }

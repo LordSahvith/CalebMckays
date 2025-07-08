@@ -1,4 +1,5 @@
 import "./App.css";
+import MainNavigation from "./components/layout/navigation/MainNavigation";
 import Hero from "./components/layout/hero/Hero";
 import About from "./components/layout/about/About";
 import Experience from "./components/layout/experience/Experience";
@@ -9,6 +10,7 @@ function App() {
   return (
     <>
       <main>
+        <MainNavigation />
         <Hero />
         <About />
         <Experience />

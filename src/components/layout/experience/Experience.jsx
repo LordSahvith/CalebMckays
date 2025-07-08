@@ -3,7 +3,7 @@ import "./Experience.css";
 
 function Experience() {
   return (
-    <section className="experience-section">
+    <section id="experience" className="experience-section">
       <h3>Experience</h3>
 
       {experienceData.map((job) => (

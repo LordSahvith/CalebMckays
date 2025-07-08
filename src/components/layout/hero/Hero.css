@@ -16,6 +16,7 @@
 .hero-text {
   width: 100%;
   max-width: 100%;
+  margin-top: 35px;
 }
 
 .hero-text {
@@ -42,7 +43,7 @@
 .hero-code code {
   margin: 25px 10px;
   font-size: 40px;
-  color: #8fa0da;
+  color: #acb7de;
   font-weight: bold;
 }
 
