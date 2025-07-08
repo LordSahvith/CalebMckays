@@ -1,9 +1,16 @@
 .projects-section {
-  background-color: #353434;
+  background-color: #292828;
 }
 
 .projects-text {
   margin-bottom: 20px;
+  text-align: center;
+}
+
+.projects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .projects h3 {
@@ -11,16 +18,12 @@
   margin-bottom: 15px;
 }
 
-.project-buttons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  padding-bottom: 15px;
-  border-bottom: 2px solid;
-  margin-bottom: 20px;
+.carousel-root {
+  width: 100%;
 }
 
-.project-buttons button {
-  color: rgba(255, 255, 255, 0.8);
+@media screen and (min-width: 768px) {
+  .carousel-root {
+    max-width: 75%;
+  }
 }

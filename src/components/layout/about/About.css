@@ -3,6 +3,18 @@
   max-width: 100%;
 }
 
+.about-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(#5e0505, #000 90%);
+}
+
+.about-image img {
+  margin-top: -20px;
+  max-width: 60%;
+}
+
 @media screen and (min-width: 1024px) {
   .about.checker-board {
     padding: 40px;
