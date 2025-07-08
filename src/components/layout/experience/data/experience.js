@@ -22,7 +22,7 @@ const professionalProjects = [
   {
     job: "Cricut",
     title: "Full Stack Developer",
-    duration: "Dec 2021 - Sep 2022  (Promotion)",
+    duration: "Dec 2021 - Sep 2022",
     content: {
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta at ad possimus soluta velit voluptatum commodi id. In aspernatur repudiandae, fuga velit obcaecati laboriosam culpa dolorem nobis molestiae itaque dignissimos? ",
@@ -44,7 +44,7 @@ const professionalProjects = [
   {
     job: "Cricut",
     title: "Front End Engineer",
-    duration: "Set 2018 - Dec 2021 (Promoted)",
+    duration: "Set 2018 - Dec 2021",
     content: {
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta at ad possimus soluta velit voluptatum commodi id. In aspernatur repudiandae, fuga velit obcaecati laboriosam culpa dolorem nobis molestiae itaque dignissimos? ",
