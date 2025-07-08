@@ -1,5 +1,5 @@
 import "./MainNavigation.css";
-import LogoSVG from "/svgs/caleb-mckays-logo.svg";
+import LogoSVG from "./caleb-mckays-logo.svg";
 
 const mainNavItems = [
   {
