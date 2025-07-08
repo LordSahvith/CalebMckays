@@ -1,5 +1,5 @@
 import "./About.css";
-import HeroImage from "/images/Hero-Image-Mobile.jpg";
+import MyImage from "/images/personal-pic.png";
 
 function About() {
   const timeAway = 1;
@@ -9,7 +9,7 @@ function About() {
   const eCommerceYears = currentYear - timeAway - 2021;
 
   return (
-    <section className="about">
+    <section className="about checker-board">
       <div className="about-text">
         <h2>About</h2>
         <p>
@@ -34,6 +34,9 @@ function About() {
           (billiards), outdoors, like: hiking, camping, and snowboarding, and of
           course video games.
         </p>
+      </div>
+      <div className="about-image">
+        <img src={MyImage} alt="Hero image placeholder" />
       </div>
     </section>
   );

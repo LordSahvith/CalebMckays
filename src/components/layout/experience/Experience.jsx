@@ -19,7 +19,7 @@ function Experience() {
             <p>{job.content.description}</p>
             <ul>
               {job.content.duties.map((duty) => (
-                <li>{duty}</li>
+                <li key={duty}>{duty}</li>
               ))}
             </ul>
           </div>
