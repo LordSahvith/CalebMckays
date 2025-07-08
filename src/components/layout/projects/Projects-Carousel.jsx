@@ -15,6 +15,7 @@ function ProjectsCarousel() {
                 {project.title}
               </a>
             </h4>
+            <p>{project.type}</p>
             <p>{project.content}</p>
           </div>
           <div>
