@@ -13,9 +13,16 @@
   align-items: center;
 }
 
-.projects h3 {
-  text-align: center;
+.project {
   margin-bottom: 15px;
+}
+
+.project-title {
+  text-align: center;
+}
+
+.project-image a {
+  display: block;
 }
 
 .carousel-root {
