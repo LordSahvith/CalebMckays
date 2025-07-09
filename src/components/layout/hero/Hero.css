@@ -18,6 +18,10 @@
   max-width: 100%;
 }
 
+.hero-text h1 {
+  margin-left: 5px; /* keeps text from leaving box */
+}
+
 .hero-text {
   position: relative;
   display: flex;
