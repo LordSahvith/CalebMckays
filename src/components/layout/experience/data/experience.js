@@ -17,7 +17,7 @@ const professionalProjects = [
       ],
     },
     url: "https://www.dynamiteclothing.com/",
-    id: 1,
+    id: 0,
   },
   {
     job: "Cricut",
@@ -39,7 +39,7 @@ const professionalProjects = [
       ],
     },
     url: "https://cricut.com/",
-    id: 2,
+    id: 1,
   },
   {
     job: "Cricut",
@@ -60,7 +60,7 @@ const professionalProjects = [
       ],
     },
     url: "https://cricut.com/",
-    id: 3,
+    id: 2,
   },
 ];
 
