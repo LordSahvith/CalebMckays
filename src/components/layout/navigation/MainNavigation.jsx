@@ -40,8 +40,12 @@ function MainNavigation() {
       <div className={`nav-links ${isOpen ? "show" : ""}`}>
         <ul>
           {mainNavItems.map((item) => (
-            <li key={item.name} onClick={toggle}>
-              <a href={item.link} tabIndex={isInTabOrder ? "0" : "-1"}>
+            <li key={item.name}>
+              <a
+                href={item.link}
+                tabIndex={isInTabOrder ? "0" : "-1"}
+                onClick={toggle}
+              >
                 {item.name}
               </a>
             </li>
