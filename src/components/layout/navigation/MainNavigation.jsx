@@ -23,6 +23,8 @@ function MainNavigation() {
     };
   });
 
+  const isInTabOrder = isOpen || (isOpen && window.innerWidth < 1024);
+
   return (
     <nav className="main-nav">
       <div className="nav-logo">
@@ -39,7 +41,9 @@ function MainNavigation() {
         <ul>
           {mainNavItems.map((item) => (
             <li key={item.name} onClick={toggle}>
-              <a href={item.link}>{item.name}</a>
+              <a href={item.link} tabIndex={isInTabOrder ? "0" : "-1"}>
+                {item.name}
+              </a>
             </li>
           ))}
         </ul>
