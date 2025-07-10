@@ -44,6 +44,34 @@
   font-size: 40px;
   color: #acb7de;
   font-weight: bold;
+  display: inline-block;
+}
+
+.code-html {
+  animation: spin 6s infinite;
+}
+
+.code-object {
+  animation: spin 6s infinite;
+  animation-delay: 3s;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @media screen and (min-width: 1024px) {
