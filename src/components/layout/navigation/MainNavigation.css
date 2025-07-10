@@ -24,7 +24,6 @@
 }
 
 .nav-menu button {
-  font-size: 25px;
   background: none;
 }
 
@@ -62,22 +61,25 @@
   max-height: 75vh;
 }
 
-.main-nav ul li {
+.nav-links ul li {
   list-style: none;
 }
 
-.main-nav ul a {
+.nav-menu button,
+.nav-links ul a {
   font-size: 25px;
   text-decoration: none;
   color: rgba(255, 255, 255, 0.8);
 }
 
-.main-nav ul a:visited {
+.nav-links ul a:visited {
   color: rgba(255, 255, 255, 0.8);
 }
 
-.main-nav ul a:hover,
-.main-nav ul a:focus {
+.nav-menu button:hover,
+.nav-menu button:focus,
+.nav-links ul a:hover,
+.nav-links ul a:focus {
   color: rgba(200, 200, 200, 0.8);
   transition: color 0.2s ease-in;
 }
