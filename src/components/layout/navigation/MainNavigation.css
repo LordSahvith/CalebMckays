@@ -14,6 +14,7 @@
 
 .main-nav .logo {
   width: 50px;
+  margin-right: 10px;
 }
 
 .main-nav .logo a {
@@ -27,7 +28,7 @@
   width: 100%;
   max-width: 100%;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   /* height: 70px;
   background-color: #242424;
@@ -41,6 +42,7 @@
 }
 
 .main-nav ul a {
+  font-size: 18px;
   text-decoration: none;
   color: rgba(255, 255, 255, 0.8);
 }

@@ -9,19 +9,23 @@ function ProjectsCarousel() {
     <Carousel showThumbs={false}>
       {projects.map((project) => (
         <div className="project" key={project.title}>
-          <div>
-            <h4>
+          <div className="project-title">
+            <h3>
               <a href={project.url} target="_blank">
                 {project.title}
               </a>
-            </h4>
+            </h3>
             <p>{project.type}</p>
-            <p>{project.content}</p>
           </div>
-          <div>
-            <a href={project.url} target="_blank">
-              <img src={project.image.src} alt={project.image.alt} />
-            </a>
+          <div className="project-content">
+            <div className="project-description">
+              <p>{project.content}</p>
+            </div>
+            <div className="project-image">
+              <a href={project.url} target="_blank">
+                <img src={project.image.src} alt={project.image.alt} />
+              </a>
+            </div>
           </div>
         </div>
       ))}
