@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import mainNavItems from "./data/mainNavItems";
 import "./MainNavigation.css";
-import LogoSVG from "./caleb-mckays-logo.svg";
 
 function MainNavigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,7 +28,7 @@ function MainNavigation() {
     <nav className="main-nav">
       <div className="nav-logo">
         <a href="/">
-          <img src={LogoSVG} alt="Caleb Mckay's Logo" />
+          <span>CM</span>
         </a>
       </div>
       <div className="nav-menu">
