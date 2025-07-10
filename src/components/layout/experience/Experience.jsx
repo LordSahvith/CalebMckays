@@ -11,6 +11,10 @@ function Experience() {
 
       <Accordion data={experienceData} />
 
+      {/* window.innerHeight < 1024 */}
+      {/* <ExperienceAccordion data={experienceData} /> */}
+      {/* <ExperienceTabs data={experienceData} /> */}
+
       {/* <Accordion>
         {experienceData.map((job) => (
           <div className="job" key={job.id}>
