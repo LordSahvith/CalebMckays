@@ -8,16 +8,22 @@
 
 .accordion {
   max-width: 800px;
-  justify-content: center;
-  align-items: center;
 }
 
 .accordion-item {
   background-color: #454545;
   padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
 }
 
 .accordion-title {
+  width: 100%;
+}
+
+.accordion-button {
   width: 100%;
   background: none;
   display: flex;
@@ -28,7 +34,7 @@
   font-size: 24px;
 }
 
-button.accordion-title:hover {
+.accordion-button:hover {
   background: none;
 }
 
@@ -37,12 +43,12 @@ button.accordion-title:hover {
 }
 
 .accordion-caret {
-  transform: rotate(90deg);
+  transform: rotate(-90deg);
   transition: transform 0.4s ease-in-out;
 }
 
 .accordion-caret.caret-toggle {
-  transform: rotate(270deg);
+  transform: rotate(-270deg);
 }
 
 .accordion-content {
@@ -57,4 +63,11 @@ button.accordion-title:hover {
   padding-top: 10px;
   max-height: 9999px;
   transition: all 0.4s cubic-bezier(1, 0, 1, 0);
+}
+
+@media screen and (min-width: 768px) {
+  /* Can turn accordion into tabs */
+  /* .accordion-item {
+    flex-direction: row;
+  } */
 }
