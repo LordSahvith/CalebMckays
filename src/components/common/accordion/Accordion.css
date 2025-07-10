@@ -45,7 +45,6 @@
 .accordion-content.show {
   border-top: 2px solid;
   padding-top: 10px;
-  height: auto;
   max-height: 9999px;
   transition: all 0.4s cubic-bezier(1, 0, 1, 0);
 }

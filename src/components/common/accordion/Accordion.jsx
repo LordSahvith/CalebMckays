@@ -4,7 +4,7 @@ import "./Accordion.css";
 function Accordion({ data }) {
   const [selected, setSelected] = useState(null);
 
-  const toggle = (item) => {
+  const toggle = function (item) {
     return selected === item ? setSelected(null) : setSelected(item);
   };
 
