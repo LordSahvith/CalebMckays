@@ -16,7 +16,8 @@ function ParticleCanvas() {
     canvas.height = windowSize.height;
 
     const particles = [];
-    const particleCount = 75;
+    const particleCount =
+      canvas.width < 768 ? 75 : canvas.width < 1440 ? 100 : 125;
 
     // Particle class
     class Particle {

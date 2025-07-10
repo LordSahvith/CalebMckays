@@ -13,15 +13,20 @@ function Accordion({ data }) {
       <div className="accordion">
         {data.map((item) => (
           <div key={item.id} className="accordion-item">
-            <div className="accordion-title" onClick={() => toggle(item.id)}>
-              <h3>{item.job}</h3>
-              <span
-                className={`accordion-caret ${
-                  selected === item.id ? "caret-toggle" : ""
-                }`}
+            <div className="accordion-title">
+              <button
+                className="accordion-button"
+                onClick={() => toggle(item.id)}
               >
-                &lt;
-              </span>
+                <h3>{item.job}</h3>
+                <span
+                  className={`accordion-caret ${
+                    selected === item.id ? "caret-toggle" : ""
+                  }`}
+                >
+                  &lt;
+                </span>
+              </button>
             </div>
             <div
               className={`accordion-content job ${

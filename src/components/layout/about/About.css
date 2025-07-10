@@ -3,6 +3,10 @@
   max-width: 100%;
 }
 
+.about-text {
+  max-width: 700px;
+}
+
 .about-image {
   max-width: 500px;
   display: flex;
@@ -19,5 +23,12 @@
 @media screen and (min-width: 1024px) {
   .about.checker-board {
     padding: 40px;
+    max-width: 1250px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .about-text {
+    max-width: 524px;
   }
 }
