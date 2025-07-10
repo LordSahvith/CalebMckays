@@ -1,40 +1,49 @@
+import { useEffect, useState } from "react";
+import mainNavItems from "./data/mainNavItems";
 import "./MainNavigation.css";
 import LogoSVG from "./caleb-mckays-logo.svg";
 
-const mainNavItems = [
-  {
-    name: "Home",
-    link: "/",
-  },
-  {
-    name: "About",
-    link: "#about",
-  },
-  {
-    name: "Experience",
-    link: "#experience",
-  },
-  {
-    name: "Projects",
-    link: "#projects",
-  },
-];
-
 function MainNavigation() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggle = function () {
+    return isOpen ? setIsOpen(false) : setIsOpen(true);
+  };
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsOpen(false);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  });
+
   return (
     <nav className="main-nav">
-      <div className="logo">
-        <a href={mainNavItems[0].link}>
-          <img src={LogoSVG} alt="" />
+      <div className="nav-logo">
+        <a href="/">
+          <img src={LogoSVG} alt="Caleb Mckay's Logo" />
         </a>
       </div>
-      <ul>
-        {mainNavItems.map((item) => (
-          <li key={item.name}>
-            <a href={item.link}>{item.name}</a>
-          </li>
-        ))}
-      </ul>
+      <div className="nav-menu">
+        <button className="nav-menu-button" onClick={toggle}>
+          <span>&#9776;</span>
+        </button>
+      </div>
+      <div className={`nav-links ${isOpen ? "show" : ""}`}>
+        <ul>
+          {mainNavItems.map((item) => (
+            <li key={item.name} onClick={toggle}>
+              <a href={item.link}>{item.name}</a>
+            </li>
+          ))}
+        </ul>
+      </div>
     </nav>
   );
 }
