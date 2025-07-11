@@ -52,15 +52,25 @@ function ParticleCanvas() {
     }
 
     // Initialize particles
-    for (let i = 0; i < particleCount; i++) {
-      const size = (Math.random() + 1.5) * 2;
-      const x = Math.random() * (innerWidth - size * 2 - size * 2) + size * 2;
-      const y = Math.random() * (innerHeight - size * 2 - size * 2) + size * 2;
-      const color = `rgba(75, 0, 0, ${Math.random()})`;
-      const velocityX = Math.random() - 0.5;
-      const velocityY = Math.random() - 0.5;
+    function init() {
+      for (let i = 0; i < particleCount; i++) {
+        const size = (Math.random() + 1.5) * 2;
+        const x =
+          Math.random() * (window.innerWidth - size * 2 - size * 2) + size * 2;
+        const y =
+          Math.random() * (window.innerHeight - size * 2 - size * 2) + size * 2;
+        const color = `rgba(75, 0, 0, ${Math.random()})`;
+        const velocityX = Math.random() - 0.5;
+        const velocityY = Math.random() - 0.5;
 
-      particles.push(new Particle(x, y, size, color, velocityX, velocityY));
+        particles.push(new Particle(x, y, size, color, velocityX, velocityY));
+      }
+    }
+
+    function clearParticles() {
+      for (let i = 0; particles.length; i++) {
+        particles.pop();
+      }
     }
 
     // connect particles with a line
@@ -105,10 +115,13 @@ function ParticleCanvas() {
       });
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
+      clearParticles();
+      init();
+      animate();
     };
 
     window.addEventListener("resize", handleResize);
-
+    init();
     animate();
 
     // Cleanup on component unmount
