@@ -13,6 +13,7 @@
   justify-content: center;
   align-items: center;
   background: radial-gradient(#5e0505, #000 90%);
+  margin-top: 20px;
 }
 
 .about-image img {
@@ -25,6 +26,10 @@
     max-width: 1250px;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .about-image {
+    margin-top: 0;
   }
 
   .about-text {
