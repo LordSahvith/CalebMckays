@@ -1,11 +1,8 @@
-import { useState } from "react";
 import "./Accordion.css";
 
-function Accordion({ data }) {
-  const [selected, setSelected] = useState(null);
-
-  const toggle = function (item) {
-    return selected === item ? setSelected(null) : setSelected(item);
+function Accordion({ data, activeId, toggleActive }) {
+  const toggle = function (itemId) {
+    return activeId === itemId ? toggleActive(null) : toggleActive(itemId);
   };
 
   return (
@@ -21,7 +18,7 @@ function Accordion({ data }) {
                 <h3>{item.job}</h3>
                 <span
                   className={`accordion-caret ${
-                    selected === item.id ? "caret-toggle" : ""
+                    activeId === item.id ? "caret-toggle" : ""
                   }`}
                 >
                   &lt;
@@ -30,7 +27,7 @@ function Accordion({ data }) {
             </div>
             <div
               className={`accordion-content job ${
-                selected === item.id ? "show" : ""
+                activeId === item.id ? "show" : ""
               }`}
             >
               <p>{item.duration}</p>

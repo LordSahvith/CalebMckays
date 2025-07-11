@@ -11,7 +11,7 @@
 }
 
 .accordion-item {
-  background-color: #454545;
+  background-color: #444444;
   padding: 10px;
   display: flex;
   justify-content: space-between;
@@ -23,6 +23,10 @@
   width: 100%;
 }
 
+.accordion-title h3 {
+  font-size: 20px;
+}
+
 .accordion-button {
   width: 100%;
   background: none;
@@ -32,14 +36,13 @@
   align-items: center;
   cursor: pointer;
   font-size: 24px;
+  color: rgba(250, 250, 250, 0.8);
 }
 
-.accordion-button:hover {
+.accordion-button:hover,
+.accordion-button:focus {
   background: none;
-}
-
-.accordion-title h3 {
-  font-size: 20px;
+  color: rgba(250, 250, 250, 0.8);
 }
 
 .accordion-caret {
@@ -54,20 +57,24 @@
 .accordion-content {
   max-height: 0;
   margin-top: 0;
+  padding-left: 10px;
   overflow: hidden;
-  transition: all 0.4s cubic-bezier(0, 1, 0, 1);
+  transition: all 0.3s cubic-bezier(0.1, 1, 0.1, 1), padding 0.2s;
 }
 
 .accordion-content.show {
   border-top: 2px solid;
   padding-top: 10px;
   max-height: 9999px;
-  transition: all 0.4s cubic-bezier(1, 0, 1, 0);
+  transition: all 0.6s cubic-bezier(1, 0.1, 1, 0.1), padding 0.2s;
 }
 
-@media screen and (min-width: 768px) {
-  /* Can turn accordion into tabs */
-  /* .accordion-item {
-    flex-direction: row;
-  } */
+@media screen and (min-width: 425px) {
+  .accordion-content {
+    padding-left: 15px;
+  }
+
+  .accordion-content.show {
+    padding: 15px;
+  }
 }

@@ -13,3 +13,9 @@
 .job ul {
   margin-left: 40px;
 }
+
+@media screen and (min-width: 768px) {
+  .experience-title h2 {
+    margin-bottom: 20px;
+  }
+}

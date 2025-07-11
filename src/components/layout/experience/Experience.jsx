@@ -1,41 +1,55 @@
+import { useEffect, useState } from "react";
 import Accordion from "../../common/accordion/Accordion";
+import Tabs from "../../common/tabs/Tabs";
 import experienceData from "./data/experience";
 import "./Experience.css";
 
 function Experience() {
+  const [activeId, setActiveId] = useState(null);
+
+  const toggleActive = function (itemId) {
+    setActiveId(itemId);
+  };
+
+  const [windowSize, setWindowSize] = useState({
+    width: window.innerWidth,
+  });
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowSize({
+        width: window.innerWidth,
+      });
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [windowSize]);
+
   return (
     <section id="experience" className="experience-section">
       <div className="experience-title">
         <h2>Experience</h2>
       </div>
 
-      <Accordion data={experienceData} />
-
-      {/* window.innerHeight < 1024 */}
-      {/* <ExperienceAccordion data={experienceData} /> */}
-      {/* <ExperienceTabs data={experienceData} /> */}
-
-      {/* <Accordion>
-        {experienceData.map((job) => (
-          <div className="job" key={job.id}>
-            <div>
-              <h4>
-                <a href={job.url} target="_blank">
-                  {job.job}
-                </a>
-              </h4>
-              <p>{job.duration}</p>
-              <p>{job.title}</p>
-              <p>{job.content.description}</p>
-              <ul>
-                {job.content.duties.map((duty) => (
-                  <li key={duty}>{duty}</li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        ))}
-      </Accordion> */}
+      {windowSize.width < 768 ? (
+        <Accordion
+          data={experienceData}
+          activeId={activeId}
+          toggleActive={toggleActive}
+        />
+      ) : (
+        <Tabs
+          data={experienceData}
+          activeId={activeId}
+          toggleActive={toggleActive}
+          windowSize={windowSize}
+        />
+      )}
     </section>
   );
 }
