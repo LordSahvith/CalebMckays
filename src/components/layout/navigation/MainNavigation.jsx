@@ -10,15 +10,17 @@ function MainNavigation() {
   };
 
   useEffect(() => {
-    const handleResize = () => {
+    const closeMenu = () => {
       setIsOpen(false);
     };
 
-    window.addEventListener("resize", handleResize);
+    window.addEventListener("resize", closeMenu);
+    window.addEventListener("scroll", closeMenu);
 
     // Cleanup on component unmount
     return () => {
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("resize", closeMenu);
+      window.removeEventListener("scroll", closeMenu);
     };
   });
 
