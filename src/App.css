@@ -109,13 +109,23 @@ button:hover {
 **************/
 a {
   color: #d40000;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+  background: linear-gradient(to right, #242424, #d40000, #242424),
+    linear-gradient(to right, #242424, #d40000, #242424);
+  background-size: 100% 0.1em, 0 0.1em;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 400ms;
 }
 
-a:hover {
+a:hover,
+a:focus {
   color: #c50035;
   cursor: pointer;
+  background-size: 0 0.1em, 100% 0.1em;
 }
 
 a:visited {
-  color: #c50035;
+  color: #b70031;
 }
