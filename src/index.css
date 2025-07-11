@@ -117,12 +117,40 @@ h1 {
   line-height: 1;
 }
 
+h2 {
+  font-size: 35px;
+}
+
+h3 {
+  font-size: 25px;
+}
+
+h4,
+h5,
+h6 {
+  font-size: 20px;
+}
+
 p {
   font-size: 18px;
 }
 
+li {
+  font-size: 16px;
+}
+
 code {
   font-family: monospace;
+}
+
+@media screen and (min-width: 1024px) {
+  p {
+    font-size: 20px;
+  }
+
+  li {
+    font-size: 18px;
+  }
 }
 
 /*******************
