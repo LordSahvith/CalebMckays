@@ -29,7 +29,7 @@ function MainNavigation() {
   return (
     <nav className="main-nav">
       <div className="nav-logo">
-        <a href="/">
+        <a href="/CalebMckays/">
           <span>CM</span>
         </a>
       </div>

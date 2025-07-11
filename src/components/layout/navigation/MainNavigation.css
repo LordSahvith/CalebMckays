@@ -27,10 +27,6 @@
   margin-top: 0; /* remove the margin from sibling divs*/
 }
 
-.nav-menu button {
-  background: none;
-}
-
 .nav-links {
   width: 100%;
   max-width: 100%;
@@ -96,7 +92,8 @@
   background-size: 0 0.1em, 100% 0.1em;
 }
 
-@media screen and (min-width: 768px) {
+.nav-menu button {
+  background: none;
 }
 
 @media screen and (min-width: 1024px) {
