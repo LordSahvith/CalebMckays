@@ -129,7 +129,7 @@ code {
 * LAYOUT & SPACING *
 *******************/
 section {
-  padding: 20px;
+  padding: 40px 20px;
 }
 
 section > * {
@@ -138,9 +138,15 @@ section > * {
   margin-right: auto;
 }
 
+@media screen and (min-width: 768px) {
+  section {
+    padding: 60px 40px;
+  }
+}
+
 @media screen and (min-width: 1024px) {
   section {
-    padding: 40px;
+    padding: 80px 60px;
   }
 }
 
