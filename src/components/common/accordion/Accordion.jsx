@@ -1,8 +1,8 @@
 import "./Accordion.css";
 
-function Accordion({ data, activeId, toggleActive }) {
+function Accordion({ data, activeId, setActiveId }) {
   const toggle = function (itemId) {
-    return activeId === itemId ? toggleActive(null) : toggleActive(itemId);
+    return activeId === itemId ? setActiveId(null) : setActiveId(itemId);
   };
 
   return (

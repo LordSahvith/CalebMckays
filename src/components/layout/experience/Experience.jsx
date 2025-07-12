@@ -1,34 +1,25 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Accordion from "../../common/accordion/Accordion";
 import Tabs from "../../common/tabs/Tabs";
 import experienceData from "./data/experience";
 import "./Experience.css";
 
-function Experience() {
-  const [activeId, setActiveId] = useState(null);
+function ExperienceType({ isAccordion, activeId, setActiveId }) {
+  return isAccordion ? (
+    <Accordion
+      data={experienceData}
+      activeId={activeId}
+      setActiveId={setActiveId}
+    />
+  ) : (
+    <Tabs data={experienceData} activeId={activeId} setActiveId={setActiveId} />
+  );
+}
 
-  const toggleActive = function (itemId) {
-    setActiveId(itemId);
-  };
-
-  const [windowSize, setWindowSize] = useState({
-    width: window.innerWidth,
-  });
-
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowSize({
-        width: window.innerWidth,
-      });
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    // Cleanup on component unmount
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, [windowSize]);
+function Experience({ windowSize }) {
+  const mobileDevices = windowSize.width < 768;
+  const init = mobileDevices ? null : 0;
+  const [activeId, setActiveId] = useState(init);
 
   return (
     <section id="experience" className="experience-section">
@@ -36,20 +27,11 @@ function Experience() {
         <h2>Experience</h2>
       </div>
 
-      {windowSize.width < 768 ? (
-        <Accordion
-          data={experienceData}
-          activeId={activeId}
-          toggleActive={toggleActive}
-        />
-      ) : (
-        <Tabs
-          data={experienceData}
-          activeId={activeId}
-          toggleActive={toggleActive}
-          windowSize={windowSize}
-        />
-      )}
+      <ExperienceType
+        isAccordion={mobileDevices}
+        activeId={activeId}
+        setActiveId={setActiveId}
+      />
     </section>
   );
 }

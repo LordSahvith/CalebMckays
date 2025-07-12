@@ -1,13 +1,8 @@
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect } from "react";
 import "./Particles.css";
 
-function ParticleCanvas() {
+function ParticleCanvas({ windowSize, setWindowSize }) {
   const canvasRef = useRef(null);
-
-  const [windowSize, setWindowSize] = useState({
-    width: window.innerWidth,
-    height: window.innerHeight,
-  });
 
   useEffect(() => {
     const canvas = canvasRef.current;

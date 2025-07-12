@@ -1,7 +1,7 @@
 import ParticleCanvas from "../../particles/ParticlesSystem";
 import "./Hero.css";
 
-function Hero() {
+function Hero({ windowSize, setWindowSize }) {
   return (
     <section className="hero">
       <div className="hero-text">
@@ -12,7 +12,7 @@ function Hero() {
           <code className="code-object">{"{}"}</code>
         </p>
       </div>
-      <ParticleCanvas />
+      <ParticleCanvas windowSize={windowSize} setWindowSize={setWindowSize} />
     </section>
   );
 }
