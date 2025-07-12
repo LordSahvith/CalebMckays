@@ -23,7 +23,7 @@ function Experience({ windowSize }) {
 
   return (
     <section id="experience" className="experience-section">
-      <div className="experience-title">
+      <div className="experience-title appear-on-scoll">
         <h2>Experience</h2>
       </div>
 

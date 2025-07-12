@@ -6,7 +6,7 @@ function Accordion({ data, activeId, setActiveId }) {
   };
 
   return (
-    <div className="accordion-wrapper">
+    <div className="accordion-wrapper appear-on-scoll">
       <div className="accordion">
         {data.map((item) => (
           <div key={item.id} className="accordion-item">

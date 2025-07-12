@@ -13,7 +13,7 @@ function Tabs({ data, activeId, setActiveId }) {
   }, []);
 
   return (
-    <div className="tabs-wrapper">
+    <div className="tabs-wrapper appear-on-scoll">
       <div className="tabs">
         <div className="tabs-titles">
           {data.map((tab) => (

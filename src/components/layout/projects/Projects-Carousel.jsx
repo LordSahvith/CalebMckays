@@ -2,8 +2,6 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from "react-responsive-carousel";
 import projects from "./data/projects";
 
-// import MobileImage from "/images/Hero-Image-Mobile.jpg";
-
 function ProjectsCarousel() {
   return (
     <Carousel showThumbs={false}>

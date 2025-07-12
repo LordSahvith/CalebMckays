@@ -4,7 +4,7 @@ import ProjectsCarousel from "./Projects-Carousel";
 function Projects() {
   return (
     <section id="projects" className="projects-section">
-      <div className="projects-text">
+      <div className="projects-text appear-on-scoll">
         <h2>Projects</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quis
@@ -14,7 +14,7 @@ function Projects() {
         </p>
       </div>
 
-      <div className="projects">
+      <div className="projects appear-on-scoll">
         <ProjectsCarousel />
       </div>
     </section>
