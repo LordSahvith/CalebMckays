@@ -72,7 +72,7 @@
   }
 
   .checker-board:nth-child(odd) > div:nth-child(odd) {
-    margin-right: 20px;
+    margin-right: 40px;
   }
 
   .checker-board:nth-child(even) > div:nth-child(odd) {
@@ -82,6 +82,12 @@
 
   .checker-board:nth-child(even) > div:nth-child(even) {
     order: 0;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .checker-board:nth-child(odd) > div:nth-child(odd) {
+    margin-right: 80px;
   }
 }
 

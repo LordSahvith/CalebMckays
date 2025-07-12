@@ -5,7 +5,7 @@ const professionalProjects = [
     duration: "Jan 2023 - Sep 2024",
     content: {
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta at ad possimus soluta velit voluptatum commodi id. In aspernatur repudiandae, fuga velit obcaecati laboriosam culpa dolorem nobis molestiae itaque dignissimos? ",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta at ad possimus soluta velit voluptatum commodi id. In aspernatur repudiandae, fuga velit obcaecati laboriosam culpa dolorem nobis molestiae itaque dignissimos? Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta at ad possimus soluta velit voluptatum commodi id. In aspernatur repudiandae, fuga velit obcaecati laboriosam culpa dolorem nobis molestiae itaque dignissimos?",
       duties: [
         "Salesforce Commerce Cloud SFCC/SFRA",
         "ADA Compliance",

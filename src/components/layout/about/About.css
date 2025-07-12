@@ -3,17 +3,17 @@
   max-width: 100%;
 }
 
-.about-text {
-  max-width: 700px;
+.about .about-text {
+  max-width: 1000px;
 }
 
 .about-image {
-  max-width: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
   background: radial-gradient(#5e0505, #000 90%);
-  margin-top: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .about-image img {
@@ -23,7 +23,7 @@
 
 @media screen and (min-width: 1024px) {
   .about.checker-board {
-    max-width: 1250px;
+    max-width: 1440px;
     margin-left: auto;
     margin-right: auto;
   }

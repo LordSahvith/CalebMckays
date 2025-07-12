@@ -1,10 +1,16 @@
+import { useEffect } from "react";
 import "./Tabs.css";
 
-function Tabs({ data, activeId, toggleActive, windowSize }) {
-  // if there is no active ID then default to first item
-  !activeId && windowSize.width >= 768
-    ? toggleActive(0)
-    : toggleActive(activeId);
+function Tabs({ data, activeId, setActiveId }) {
+  const toggle = function (itemId) {
+    setActiveId(itemId);
+  };
+
+  useEffect(() => {
+    if (!activeId) {
+      toggle(0);
+    }
+  }, []);
 
   return (
     <div className="tabs-wrapper">
@@ -17,7 +23,7 @@ function Tabs({ data, activeId, toggleActive, windowSize }) {
             >
               <button
                 className="accordion-button"
-                onClick={() => toggleActive(tab.id)}
+                onClick={() => toggle(tab.id)}
               >
                 <h3>{tab.job}</h3>
               </button>
@@ -27,12 +33,13 @@ function Tabs({ data, activeId, toggleActive, windowSize }) {
         <div className="tabs-content">
           {data.map((job) => (
             <div
+              key={job.id}
               className={`tab-content job ${
                 job.id === activeId ? "active" : ""
               }`}
             >
-              <p>{job.duration}</p>
               <p>{job.title}</p>
+              <p>{job.duration}</p>
               <p>{job.content.description}</p>
               <ul>
                 {job.content.duties.map((duty) => (
