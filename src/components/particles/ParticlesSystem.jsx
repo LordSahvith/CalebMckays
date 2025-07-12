@@ -112,7 +112,6 @@ function ParticleCanvas({ windowSize, setWindowSize }) {
       canvas.height = window.innerHeight;
       clearParticles();
       init();
-      animate();
     };
 
     window.addEventListener("resize", handleResize);
@@ -124,7 +123,7 @@ function ParticleCanvas({ windowSize, setWindowSize }) {
       cancelAnimationFrame(animate);
       window.removeEventListener("resize", handleResize);
     };
-  }, [windowSize]);
+  }, []);
 
   return <canvas className="particles-canvas" ref={canvasRef} />;
 }

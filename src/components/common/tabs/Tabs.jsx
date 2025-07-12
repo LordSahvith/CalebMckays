@@ -38,8 +38,8 @@ function Tabs({ data, activeId, setActiveId }) {
                 job.id === activeId ? "active" : ""
               }`}
             >
-              <p>{job.duration}</p>
               <p>{job.title}</p>
+              <p>{job.duration}</p>
               <p>{job.content.description}</p>
               <ul>
                 {job.content.duties.map((duty) => (

@@ -30,8 +30,8 @@ function Accordion({ data, activeId, setActiveId }) {
                 activeId === item.id ? "show" : ""
               }`}
             >
-              <p>{item.duration}</p>
               <p>{item.title}</p>
+              <p>{item.duration}</p>
               <p>{item.content.description}</p>
               <ul>
                 {item.content.duties.map((duty) => (
