@@ -115,6 +115,7 @@ button:hover {
 **************/
 a {
   color: #d40000;
+  padding: 5px;
   text-decoration: none;
   transition: color 0.2s ease-in-out;
   background: linear-gradient(to right, #242424, #d40000, #242424),
