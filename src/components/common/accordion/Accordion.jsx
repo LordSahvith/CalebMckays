@@ -37,9 +37,13 @@ function Accordion({ data, activeId, setActiveId }) {
                 activeId === item.id ? "show" : ""
               }`}
             >
-              <p>{item.title}</p>
+              <h4 className="job-title">{item.title}</h4>
               <p>{item.duration}</p>
-              <p>{item.content.description}</p>
+              <div className="accordion-description">
+                {item.content.description.map((desc) => (
+                  <p key={desc}>{desc}</p>
+                ))}
+              </div>
               <ul>
                 {item.content.duties.map((duty) => (
                   <li key={duty}>{duty}</li>

@@ -17,7 +17,20 @@ function ProjectsCarousel() {
           </div>
           <div className="project-content">
             <div className="project-description">
-              <p>{project.content}</p>
+              {project.content.map((desc) => (
+                <p key={desc}>{desc}</p>
+              ))}
+
+              {project.hasActiveUrl ? (
+                <p>
+                  Find current site
+                  <a href={project.activeUrl} target="_blank">
+                    here.
+                  </a>
+                </p>
+              ) : (
+                ""
+              )}
             </div>
             <div className="project-image">
               <a href={project.url} target="_blank">

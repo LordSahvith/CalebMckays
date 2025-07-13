@@ -48,9 +48,6 @@
 .plus-icon {
   width: 40px;
   position: relative;
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
 }
 
 .plus-icon .bar {
@@ -91,6 +88,10 @@
   margin-top: 10px;
   max-height: 9999px;
   transition: all 0.6s cubic-bezier(1, 0.1, 1, 0.1), padding 0.2s, margin 0s;
+}
+
+.accordion-description {
+  margin-top: 15px;
 }
 
 @media screen and (min-width: 425px) {

@@ -13,6 +13,13 @@ function About() {
       <div className="about-text appear-on-scoll">
         <h2>About</h2>
         <p>
+          I'm Caleb Anderson a Full Stack Devloper & Engineer with
+          {` ${experienceYears}`} years of experience building and maintaining
+          Websites on a production level, with the main focus of the past
+          {` ${eCommerceYears}`} years being B2C eCommerce and have achieved my
+          certification as a Salesforce Commerce Cloud Developer.
+        </p>
+        <p>
           My passion is for the perfect blend of art & science, whether that's
           with Web Development, Game Development, Music or anything else that
           involves both art & science. For the past
@@ -22,17 +29,9 @@ function About() {
           is no end in sight.
         </p>
         <p>
-          I'm Caleb Anderson a Full Stack Devloper & Engineer with
-          {` ${experienceYears}`} years of experience building and maintaining
-          Websites on a production level, with the main focus of the past
-          {` ${eCommerceYears}`} years being B2C eCommerce and am a certified
-          Salesforce Commerce Cloud Developer.
-        </p>
-        <p>
-          Computer's aren't my only passion by a long shot though! I have a deep
-          love for all music/genres, but especially metal, books, pool
-          (billiards), outdoors, like: hiking, camping, and snowboarding, and of
-          course video games.
+          If you are looking for a new addition for your team and/or love the
+          work you're seeing? Then don't hesitate to reach out! I'm always open
+          to new fun ideas or even new clients that want a new inovative site!!
         </p>
       </div>
       <div className="about-image appear-on-scoll">
