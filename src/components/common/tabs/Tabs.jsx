@@ -38,9 +38,13 @@ function Tabs({ data, activeId, setActiveId }) {
                 job.id === activeId ? "active" : ""
               }`}
             >
-              <p>{job.title}</p>
+              <h4 className="job-title">{job.title}</h4>
               <p>{job.duration}</p>
-              <p>{job.content.description}</p>
+              <div className="tab-description">
+                {job.content.description.map((desc) => (
+                  <p key={desc}>{desc}</p>
+                ))}
+              </div>
               <ul>
                 {job.content.duties.map((duty) => (
                   <li key={duty}>{duty}</li>
