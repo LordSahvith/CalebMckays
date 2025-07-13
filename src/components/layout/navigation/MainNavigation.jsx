@@ -35,7 +35,12 @@ function MainNavigation() {
       </div>
       <div className="nav-menu">
         <button className="nav-menu-button" onClick={toggle}>
-          <span>&#9776;</span>
+          <span className="sr-only">&#9776;</span>
+          <div className={`menu-icon ${isOpen ? "show" : ""}`}>
+            <span className="bar bar-top"></span>
+            <span className="bar bar-middle"></span>
+            <span className="bar bar-bottom"></span>
+          </div>
         </button>
       </div>
       <div className={`nav-links ${isOpen ? "show" : ""}`}>

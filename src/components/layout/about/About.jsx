@@ -10,7 +10,7 @@ function About() {
 
   return (
     <section id="about" className="about checker-board">
-      <div className="about-text">
+      <div className="about-text appear-on-scoll">
         <h2>About</h2>
         <p>
           My passion is for the perfect blend of art & science, whether that's
@@ -35,7 +35,7 @@ function About() {
           course video games.
         </p>
       </div>
-      <div className="about-image">
+      <div className="about-image appear-on-scoll">
         <img src={MyImage} alt="Hero image placeholder" />
       </div>
     </section>

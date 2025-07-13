@@ -6,7 +6,7 @@ function Accordion({ data, activeId, setActiveId }) {
   };
 
   return (
-    <div className="accordion-wrapper">
+    <div className="accordion-wrapper appear-on-scoll">
       <div className="accordion">
         {data.map((item) => (
           <div key={item.id} className="accordion-item">
@@ -17,11 +17,18 @@ function Accordion({ data, activeId, setActiveId }) {
               >
                 <h3>{item.job}</h3>
                 <span
-                  className={`accordion-caret ${
-                    activeId === item.id ? "caret-toggle" : ""
+                  className={`accordion-plus ${
+                    activeId === item.id ? "show" : ""
                   }`}
                 >
-                  &lt;
+                  <div
+                    className={`plus-icon ${
+                      activeId === item.id ? "show" : ""
+                    }`}
+                  >
+                    <span className="bar bar-vertical"></span>
+                    <span className="bar bar-horizontal"></span>
+                  </div>
                 </span>
               </button>
             </div>
