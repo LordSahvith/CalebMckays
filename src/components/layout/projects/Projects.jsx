@@ -54,12 +54,7 @@ function Projects() {
     <section id="projects" className="projects-section">
       <div className="projects-text appear-on-scroll">
         <h2>Projects</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quis
-          reiciendis impedit at quod aliquam. Doloribus nemo enim quo sunt
-          voluptatem iste praesentium beatae, modi cupiditate at, officiis,
-          recusandae esse.
-        </p>
+        <p>Both Freelance & Personal Projects.</p>
       </div>
 
       <div className="projects">
