@@ -16,12 +16,14 @@ function ExperienceAccordion({ data, activeId, setActiveId }) {
         <AccordionItem key={item.id}>
           <AccordionTitle item={item.id} action={toggle}>
             <h3>{item.job}</h3>
-            <span className={`plus-icon ${activeId === item.id ? "show" : ""}`}>
+            <span
+              className={`plus-icon ${activeId === item.id ? "active" : ""}`}
+            >
               <span className="bar bar-vertical"></span>
               <span className="bar bar-horizontal"></span>
             </span>
           </AccordionTitle>
-          <AccordionContent shouldOpen={activeId === item.id}>
+          <AccordionContent isActive={activeId === item.id}>
             <div className="job">
               <h4 className="job-title">{item.title}</h4>
               <p>{item.duration}</p>

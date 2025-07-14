@@ -66,7 +66,7 @@
   transform: rotate(90deg);
 }
 
-.plus-icon.show .bar-vertical {
+.plus-icon.active .bar-vertical {
   transform: rotate(360deg);
 }
 
@@ -78,7 +78,7 @@
   transition: all 0.3s cubic-bezier(0.1, 1, 0.1, 1), padding 0.2s;
 }
 
-.accordion-content.show {
+.accordion-content.active {
   background: linear-gradient(to right, #444, #fff, #444);
   background-size: 100% 0.1em, 0 0.1em;
   background-position: 0 0, 100% 100%;
@@ -99,7 +99,7 @@
     padding-left: 15px;
   }
 
-  .accordion-content.show {
+  .accordion-content.active {
     padding: 15px;
   }
 }

@@ -14,9 +14,9 @@ function AccordionTitle({ item, action, children }) {
   );
 }
 
-function AccordionContent({ shouldOpen, children }) {
+function AccordionContent({ isActive, children }) {
   return (
-    <div className={`accordion-content ${shouldOpen ? "show" : ""}`}>
+    <div className={`accordion-content ${isActive ? "active" : ""}`}>
       {children}
     </div>
   );
