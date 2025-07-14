@@ -10,7 +10,7 @@ function About() {
 
   return (
     <section id="about" className="about checker-board">
-      <div className="about-text appear-on-scoll">
+      <div className="about-text appear-on-scroll">
         <h2>About</h2>
         <p>
           I'm Caleb Anderson a Full Stack Devloper & Engineer with
@@ -34,7 +34,7 @@ function About() {
           to new fun ideas or even new clients that want a new inovative site!!
         </p>
       </div>
-      <div className="about-image appear-on-scoll">
+      <div className="about-image appear-on-scroll">
         <img src={MyImage} alt="Hero image placeholder" />
       </div>
     </section>

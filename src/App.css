@@ -48,15 +48,12 @@
 /****************
 * CHECKER BOARD *
 ****************/
+
 .checker-board {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.checker-board:nth-child(odd) {
-  background-color: #242424;
 }
 
 .checker-board > div {
@@ -117,7 +114,8 @@ button:hover {
 /**************
 *    Links    *
 **************/
-a {
+
+a.underline-animated {
   color: #d40000;
   padding: 5px;
   text-decoration: none;
@@ -130,8 +128,8 @@ a {
   transition: background-size 400ms;
 }
 
-a:hover,
-a:focus {
+a.underline-animated:hover,
+a.underline-animated:focus {
   color: #c50035;
   cursor: pointer;
   background-size: 0 0.1em, 100% 0.1em;
@@ -145,10 +143,10 @@ a:visited {
 * ANIMATE ON SCROLL *
 ********************/
 
-.appear-on-scoll {
+.appear-on-scroll {
   animation: appearOnScroll linear;
   animation-timeline: view();
-  animation-range: entry 0 cover 20%;
+  animation-range: entry 0 cover 25%;
 }
 
 @keyframes appearOnScroll {

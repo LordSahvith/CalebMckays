@@ -16,6 +16,7 @@ const projects = [
     url: "https://lordsahvith.github.io/green-pig-pub/index.html",
     activeUrl: "https://thegreenpigpub.com/",
     hasActiveUrl: true,
+    id: 0,
   },
   {
     title: "Yu-Gi-Oh Card Collector",
@@ -29,6 +30,7 @@ const projects = [
     },
     url: "/",
     hasActiveUrl: false,
+    id: 1,
   },
 ];
 

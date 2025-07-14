@@ -24,7 +24,7 @@ function TabContent({ isActive, children }) {
 
 function Tabs({ children }) {
   return (
-    <div className="tabs-wrapper appear-on-scoll">
+    <div className="tabs-wrapper appear-on-scroll">
       <div className="tabs">{children}</div>
     </div>
   );

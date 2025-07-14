@@ -27,7 +27,7 @@ function Experience({ windowSize }) {
 
   return (
     <section id="experience" className="experience-section">
-      <div className="experience-title appear-on-scoll">
+      <div className="experience-title appear-on-scroll">
         <h2>Experience</h2>
       </div>
 

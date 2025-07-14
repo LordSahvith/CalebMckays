@@ -70,6 +70,7 @@ button:focus-visible {
 /*******************
 * DEFAULT ELEMENTS *
 *******************/
+
 * {
   padding: 0;
   margin: 0;
@@ -101,6 +102,7 @@ html {
 /****************
 * TEXT ELEMENTS *
 ****************/
+
 h1,
 h2,
 h3,
@@ -164,6 +166,7 @@ code {
 /*******************
 * LAYOUT & SPACING *
 *******************/
+
 section {
   padding: 80px 20px;
   width: 100%;
@@ -177,7 +180,7 @@ section {
 
 section > * {
   width: 100%;
-  max-width: 1400px;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -186,11 +189,19 @@ section > * {
   section {
     padding: 60px 40px;
   }
+
+  section > * {
+    max-width: 700px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
   section {
     padding: 80px 60px;
+  }
+
+  section > * {
+    max-width: 1440px;
   }
 }
 
