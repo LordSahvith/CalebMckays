@@ -1,0 +1,58 @@
+.modal {
+  display: none;
+  width: 100%;
+  max-width: 100%;
+  height: calc(100% - 70px);
+  position: fixed;
+  top: 70px;
+  left: 0;
+  background: #343434;
+  z-index: 99;
+}
+
+.modal.open {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.close-modal {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 25px;
+  right: 15px;
+}
+
+.close-button {
+  background: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: flex-start;
+}
+
+.close-button:hover {
+  background: none;
+}
+
+.close-icon .bar {
+  display: inline-block;
+  width: 25px;
+  height: 4px;
+  background: linear-gradient(to right, #444, #fff, #fff, #444);
+  background-size: 100% 3px, 0 3px;
+  background-position: 0 0, 100% 100%;
+  background-repeat: no-repeat;
+  transition: transform 0.4s ease-in-out;
+  position: absolute;
+}
+
+.close-icon .bar-vertical {
+  transform: rotate(45deg);
+}
+
+.close-icon .bar-horizontal {
+  transform: rotate(-45deg);
+}

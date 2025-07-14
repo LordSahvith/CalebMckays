@@ -122,3 +122,33 @@ button:visited {
     transform: translateY(0px);
   }
 }
+
+/******************
+*      FORMS      *
+******************/
+
+form {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+label,
+input,
+textarea {
+  width: 100%;
+  max-width: 100%;
+  padding: 8px 0;
+}
+
+input,
+textarea {
+  padding: 8px;
+}
+
+form button {
+  margin-top: 15px;
+}
