@@ -31,14 +31,14 @@ function App() {
 
   return (
     <>
+      <MainNavigation />
       <main>
-        <MainNavigation />
         <Hero windowSize={windowSize} setWindowSize={setWindowSize} />
         <About />
         <Experience windowSize={windowSize} />
         <Projects />
-        <Footer />
       </main>
+      <Footer />
     </>
   );
 }

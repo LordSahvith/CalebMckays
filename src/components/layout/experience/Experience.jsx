@@ -1,12 +1,13 @@
 import { useState } from "react";
-import Accordion from "../../common/accordion/Accordion";
+// import { Accordion } from "../../common/accordion/Accordion";
+import ExperienceAccordion from "./ExperienceAccordion";
 import Tabs from "../../common/tabs/Tabs";
 import experienceData from "./data/experience";
 import "./Experience.css";
 
 function ExperienceType({ isAccordion, activeId, setActiveId }) {
   return isAccordion ? (
-    <Accordion
+    <ExperienceAccordion
       data={experienceData}
       activeId={activeId}
       setActiveId={setActiveId}
