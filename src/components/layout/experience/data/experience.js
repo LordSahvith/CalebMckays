@@ -54,7 +54,7 @@ const professionalExperience = [
     duration: "Set 2018 - Dec 2021",
     content: {
       description: [
-        "This role consisted of building custom components for the Design Team and Business like carousels or accordions. One of the highlihgts was to create and maintain the micro-app called, The Cricut Heat Guide. This project was built from scratch to last the test of time and by working cross-teams (designers & product testing) to build a guide that teaches user's how to use the products correctly with step-by-step instructions for both the machine & material, to get the best and safest results from your personal project.",
+        "This role consisted of building custom components for the Design Team and Business like carousels or accordions. One of the highlihgts was to create and maintain the micro-app called, The Cricut Heat Guide. This project was built from scratch to last the test of time by working cross-teams (designers & product testing) to build a guide that teaches user's how to use the products correctly with step-by-step instructions for both the machine & material, to get the best and safest results from your personal project.",
         "This role also had a complete site migration from Drupal 8 into Magento 2, converging the pre-purchase site with the purchase or eCommerce site to build one single and seemless experience. For this migration, we needed to recreate our existing componets into versions that worked with Magento 2 and could be managed by it's CMS.",
         "My daily job consisted of the following responsibilities and technologies:",
       ],

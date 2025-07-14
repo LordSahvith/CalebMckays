@@ -1,18 +1,22 @@
 import { useState } from "react";
-import Accordion from "../../common/accordion/Accordion";
-import Tabs from "../../common/tabs/Tabs";
+import ExperienceAccordion from "./ExperienceAccordion";
+import ExperienceTabs from "./ExperienceTabs";
 import experienceData from "./data/experience";
 import "./Experience.css";
 
 function ExperienceType({ isAccordion, activeId, setActiveId }) {
   return isAccordion ? (
-    <Accordion
+    <ExperienceAccordion
       data={experienceData}
       activeId={activeId}
       setActiveId={setActiveId}
     />
   ) : (
-    <Tabs data={experienceData} activeId={activeId} setActiveId={setActiveId} />
+    <ExperienceTabs
+      data={experienceData}
+      activeId={activeId}
+      setActiveId={setActiveId}
+    />
   );
 }
 
@@ -23,15 +27,17 @@ function Experience({ windowSize }) {
 
   return (
     <section id="experience" className="experience-section">
-      <div className="experience-title appear-on-scoll">
+      <div className="experience-title appear-on-scroll">
         <h2>Experience</h2>
       </div>
 
-      <ExperienceType
-        isAccordion={mobileDevices}
-        activeId={activeId}
-        setActiveId={setActiveId}
-      />
+      <div className="experience-content appear-on-scroll">
+        <ExperienceType
+          isAccordion={mobileDevices}
+          activeId={activeId}
+          setActiveId={setActiveId}
+        />
+      </div>
     </section>
   );
 }

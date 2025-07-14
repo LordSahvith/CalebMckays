@@ -1,46 +1,3 @@
-/* #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-} */
-
 .sr-only {
   display: none;
 }
@@ -48,15 +5,12 @@
 /****************
 * CHECKER BOARD *
 ****************/
+
 .checker-board {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.checker-board:nth-child(odd) {
-  background-color: #242424;
 }
 
 .checker-board > div {
@@ -117,7 +71,8 @@ button:hover {
 /**************
 *    Links    *
 **************/
-a {
+
+a.underline-animated {
   color: #d40000;
   padding: 5px;
   text-decoration: none;
@@ -130,8 +85,8 @@ a {
   transition: background-size 400ms;
 }
 
-a:hover,
-a:focus {
+a.underline-animated:hover,
+a.underline-animated:focus {
   color: #c50035;
   cursor: pointer;
   background-size: 0 0.1em, 100% 0.1em;
@@ -145,10 +100,10 @@ a:visited {
 * ANIMATE ON SCROLL *
 ********************/
 
-.appear-on-scoll {
+.appear-on-scroll {
   animation: appearOnScroll linear;
   animation-timeline: view();
-  animation-range: entry 0 cover 20%;
+  animation-range: entry 0 cover 25%;
 }
 
 @keyframes appearOnScroll {
