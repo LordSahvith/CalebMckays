@@ -1,6 +1,38 @@
 import { useEffect } from "react";
 import "./Tabs.css";
 
+function TabTitles({ item, isActive, toggle }) {
+  return (
+    <div className={`tab-button ${isActive ? "active" : ""}`}>
+      <button className="accordion-button" onClick={() => toggle(item.id)}>
+        <h3>{item.job}</h3>
+      </button>
+    </div>
+  );
+}
+
+function TabContent({ item, isActive }) {
+  return (
+    <div
+      key={item.id}
+      className={`tab-content job ${isActive ? "active" : ""}`}
+    >
+      <h4 className="job-title">{item.title}</h4>
+      <p>{item.duration}</p>
+      <div className="tab-description">
+        {item.content.description.map((desc) => (
+          <p key={desc}>{desc}</p>
+        ))}
+      </div>
+      <ul>
+        {item.content.duties.map((duty) => (
+          <li key={duty}>{duty}</li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
 function Tabs({ data, activeId, setActiveId }) {
   const toggle = function (itemId) {
     setActiveId(itemId);
@@ -17,40 +49,17 @@ function Tabs({ data, activeId, setActiveId }) {
       <div className="tabs">
         <div className="tabs-titles">
           {data.map((tab) => (
-            <div
+            <TabTitles
               key={tab.id}
-              className={`tab-button ${tab.id === activeId ? "active" : ""}`}
-            >
-              <button
-                className="accordion-button"
-                onClick={() => toggle(tab.id)}
-              >
-                <h3>{tab.job}</h3>
-              </button>
-            </div>
+              item={tab}
+              isActive={tab.id === activeId}
+              toggle={toggle}
+            />
           ))}
         </div>
         <div className="tabs-content">
           {data.map((job) => (
-            <div
-              key={job.id}
-              className={`tab-content job ${
-                job.id === activeId ? "active" : ""
-              }`}
-            >
-              <h4 className="job-title">{job.title}</h4>
-              <p>{job.duration}</p>
-              <div className="tab-description">
-                {job.content.description.map((desc) => (
-                  <p key={desc}>{desc}</p>
-                ))}
-              </div>
-              <ul>
-                {job.content.duties.map((duty) => (
-                  <li key={duty}>{duty}</li>
-                ))}
-              </ul>
-            </div>
+            <TabContent item={job} isActive={job.id === activeId} />
           ))}
         </div>
       </div>
