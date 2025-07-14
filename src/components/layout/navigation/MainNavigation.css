@@ -131,10 +131,6 @@ button.underline-animated:hover {
   margin-bottom: 5px;
 }
 
-.menu-icon:hover .bar {
-  background: linear-gradient(to right, #444, #aaa, #aaa, #444);
-}
-
 .menu-icon .bar-bottom {
   margin-bottom: 0;
 }

@@ -50,6 +50,8 @@ function Project({ project }) {
 }
 
 function Projects() {
+  const recentProjects = projects.slice().reverse();
+
   return (
     <section id="projects" className="projects-section">
       <div className="projects-text appear-on-scroll">
@@ -58,7 +60,7 @@ function Projects() {
       </div>
 
       <div className="projects">
-        {projects.map((project) => (
+        {recentProjects.map((project) => (
           <Project key={project.id} project={project} />
         ))}
       </div>

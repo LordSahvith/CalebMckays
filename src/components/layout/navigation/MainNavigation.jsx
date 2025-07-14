@@ -42,10 +42,6 @@ function MainNavigation() {
   return (
     <nav className="main-nav">
       <div className="nav-logo">
-        {/* <a className="underline-animated" href="/CalebMckays/">
-          <span>CM</span>
-        </a> */}
-
         <button
           className="underline-animated"
           tabIndex={isInTabOrder ? "0" : "-1"}
@@ -68,14 +64,6 @@ function MainNavigation() {
         <ul>
           {mainNavItems.map((item) => (
             <li key={item.name}>
-              {/* <a
-                className="underline-animated"
-                href={item.link}
-                tabIndex={isInTabOrder ? "0" : "-1"}
-                onClick={toggle}
-              >
-                {item.name}
-              </a> */}
               <button
                 className="underline-animated"
                 tabIndex={isInTabOrder ? "0" : "-1"}
