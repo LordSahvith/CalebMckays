@@ -1,6 +1,54 @@
 import "./Projects.css";
 import projects from "./data/projects";
 
+function Project({ project }) {
+  return (
+    <div className="project checker-board">
+      <div className="project-content appear-on-scroll">
+        <div className="project-title">
+          <h3>
+            <a
+              className="underline-animated"
+              href={project.url}
+              target="_blank"
+            >
+              {project.title}
+            </a>
+          </h3>
+          <p>{project.type}</p>
+        </div>
+
+        <div className="project-description">
+          {project.content.map((desc) => (
+            <p key={desc}>{desc}</p>
+          ))}
+
+          {project.hasActiveUrl ? (
+            <p>
+              Find current site
+              <a
+                className="underline-animated"
+                href={project.activeUrl}
+                target="_blank"
+              >
+                here.
+              </a>
+            </p>
+          ) : (
+            ""
+          )}
+        </div>
+      </div>
+
+      <div className="project-image appear-on-scroll">
+        <a href={project.url} target="_blank">
+          <img src={project.image.src} alt={project.image.alt} />
+        </a>
+      </div>
+    </div>
+  );
+}
+
 function Projects() {
   return (
     <section id="projects" className="projects-section">
@@ -16,47 +64,7 @@ function Projects() {
 
       <div className="projects">
         {projects.map((project) => (
-          <div className="project checker-board" key={project.id}>
-            <div className="project-content appear-on-scroll">
-              <div className="project-title">
-                <h3>
-                  <a
-                    className="underline-animated"
-                    href={project.url}
-                    target="_blank"
-                  >
-                    {project.title}
-                  </a>
-                </h3>
-                <p>{project.type}</p>
-              </div>
-              <div className="project-description">
-                {project.content.map((desc) => (
-                  <p key={desc}>{desc}</p>
-                ))}
-
-                {project.hasActiveUrl ? (
-                  <p>
-                    Find current site
-                    <a
-                      className="underline-animated"
-                      href={project.activeUrl}
-                      target="_blank"
-                    >
-                      here.
-                    </a>
-                  </p>
-                ) : (
-                  ""
-                )}
-              </div>
-            </div>
-            <div className="project-image appear-on-scroll">
-              <a href={project.url} target="_blank">
-                <img src={project.image.src} alt={project.image.alt} />
-              </a>
-            </div>
-          </div>
+          <Project key={project.id} project={project} />
         ))}
       </div>
     </section>

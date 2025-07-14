@@ -31,11 +31,13 @@ function Experience({ windowSize }) {
         <h2>Experience</h2>
       </div>
 
-      <ExperienceType
-        isAccordion={mobileDevices}
-        activeId={activeId}
-        setActiveId={setActiveId}
-      />
+      <div className="experience-content appear-on-scroll">
+        <ExperienceType
+          isAccordion={mobileDevices}
+          activeId={activeId}
+          setActiveId={setActiveId}
+        />
+      </div>
     </section>
   );
 }
