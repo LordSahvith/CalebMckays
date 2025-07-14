@@ -7,9 +7,7 @@ function TabsTitlesWrapper({ children }) {
 function TabTitle({ item, isActive, action, children }) {
   return (
     <div className={`tab-button ${isActive ? "active" : ""}`}>
-      <button className="accordion-button" onClick={() => action(item)}>
-        {children}
-      </button>
+      <button onClick={() => action(item)}>{children}</button>
     </div>
   );
 }
