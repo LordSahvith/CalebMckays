@@ -8,7 +8,7 @@ function Modal({ shouldOpen, setShouldOpen, children }) {
 
   useEffect(() => {
     const handleEscapeKey = function (event) {
-      if (event.key.toLowerCase() === "escape") {
+      if (event.key === "Escape") {
         setShouldOpen(false);
       }
     };
@@ -19,7 +19,7 @@ function Modal({ shouldOpen, setShouldOpen, children }) {
     return () => {
       window.removeEventListener("keydown", handleEscapeKey);
     };
-  });
+  }, []);
 
   return (
     <section

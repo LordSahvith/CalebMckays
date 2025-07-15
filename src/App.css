@@ -59,6 +59,7 @@ button {
   align-items: center;
   padding: 12px 15px;
   background-color: #d40000;
+  color: rgba(255, 255, 255, 0.8);
   border: none;
   line-height: 1;
 }
