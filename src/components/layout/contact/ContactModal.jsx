@@ -1,6 +1,6 @@
 import Modal from "../../common/modal/Modal";
 import Form from "../../common/forms/Form";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 function ContactModal({ shouldOpen, setShouldOpen }) {
   const [recipient, setRecipient] = useState("");
