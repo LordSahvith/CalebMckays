@@ -51,6 +51,7 @@ function ContactModal({ shouldOpen, setShouldOpen }) {
         <a
           className="underline-animated"
           href="https://www.linkedin.com/in/thecalebanderson/"
+          target="_blank"
         >
           LinkedIn
         </a>
