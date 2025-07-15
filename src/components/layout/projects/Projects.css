@@ -58,4 +58,25 @@
   .projects-text {
     text-align: center;
   }
+
+  .project {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .project-content {
+    text-align: center;
+  }
+
+  .project-title p {
+    margin: 5px 0 0 0px;
+  }
+
+  .project button.underline-animated {
+    margin-left: 0;
+  }
+
+  .project-button {
+    margin: 5px 0 0 0px;
+  }
 }

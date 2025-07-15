@@ -8,7 +8,7 @@
   position: fixed;
   top: 70px;
   left: 0;
-  background: #343434;
+  background: #444;
   z-index: 99;
 }
 
@@ -29,8 +29,8 @@
 .close-modal {
   width: 25px;
   height: 25px;
-  position: fixed;
-  top: 100px;
+  position: absolute;
+  top: 25px;
   right: 25px;
   z-index: 100;
 }
@@ -67,8 +67,23 @@
 .close-icon .bar-horizontal {
   transform: rotate(-45deg);
 }
+
 @media screen and (min-width: 768px) {
   .modal-content {
     max-width: 600px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .modal {
+    max-width: 600px;
+    max-height: 500px;
+    top: 15%;
+    left: 20%;
+  }
+
+  .modal.open {
+    padding: 0 40px;
+    justify-content: center;
   }
 }
