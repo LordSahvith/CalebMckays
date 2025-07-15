@@ -53,6 +53,7 @@
 *   Buttons   *
 **************/
 button {
+  font-family: "ltc-goudy-thirty", Helvetica, Arial, sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -72,7 +73,8 @@ button:hover {
 *    Links    *
 **************/
 
-a.underline-animated {
+a.underline-animated,
+button.underline-animated {
   color: #d40000;
   padding: 5px;
   text-decoration: none;
@@ -86,13 +88,16 @@ a.underline-animated {
 }
 
 a.underline-animated:hover,
-a.underline-animated:focus {
+a.underline-animated:focus,
+button.underline-animated:hover,
+button.underline-animated:focus {
   color: #c50035;
   cursor: pointer;
   background-size: 0 0.1em, 100% 0.1em;
 }
 
-a:visited {
+a:visited,
+button:visited {
   color: #b70031;
 }
 
@@ -103,7 +108,7 @@ a:visited {
 .appear-on-scroll {
   animation: appearOnScroll linear;
   animation-timeline: view();
-  animation-range: entry 0 cover 25%;
+  animation-range: entry 0 cover 20%;
 }
 
 @keyframes appearOnScroll {
@@ -117,3 +122,37 @@ a:visited {
     transform: translateY(0px);
   }
 }
+
+/******************
+*      FORMS      *
+******************/
+
+form {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+label,
+input,
+textarea {
+  width: 100%;
+  max-width: 100%;
+  padding: 8px 0;
+}
+
+input,
+textarea {
+  padding: 8px;
+}
+
+form button {
+  margin-top: 15px;
+}
+
+/*****************
+*      MISC      *
+*****************/

@@ -46,10 +46,12 @@ function ExperienceAccordion({ data, activeId, setActiveId }) {
   return (
     <Accordion>
       {data.map((item) => (
-        <AccordionItem key={item.id}>
-          <Title item={item} activeId={activeId} action={toggle} />
-          <Content item={item} activeId={activeId} />
-        </AccordionItem>
+        <div key={item.id} className="appear-on-scroll">
+          <AccordionItem>
+            <Title item={item} activeId={activeId} action={toggle} />
+            <Content item={item} activeId={activeId} />
+          </AccordionItem>
+        </div>
       ))}
     </Accordion>
   );

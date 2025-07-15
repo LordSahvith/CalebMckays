@@ -1,11 +1,11 @@
 import "./Projects.css";
 import projects from "./data/projects";
 
-function Project({ project }) {
+function Project({ project, modalAction, isModal = false }) {
   return (
     <div className="project checker-board">
-      <div className="project-content appear-on-scroll">
-        <div className="project-title">
+      <div className="project-content">
+        <div className="project-title appear-on-scroll">
           <h3>
             <a
               className="underline-animated"
@@ -18,26 +18,39 @@ function Project({ project }) {
           <p>{project.type}</p>
         </div>
 
-        <div className="project-description">
-          {project.content.map((desc) => (
-            <p key={desc}>{desc}</p>
-          ))}
+        {!isModal ? (
+          <div className="project-button appear-on-scroll">
+            <button
+              className="underline-animated"
+              onClick={() => modalAction(project.id)}
+            >
+              Learn More
+            </button>
+          </div>
+        ) : (
+          <div className="project-description">
+            {project.content.map((desc) => (
+              <p key={desc} className="appear-on-scroll">
+                {desc}
+              </p>
+            ))}
 
-          {project.hasActiveUrl ? (
-            <p>
-              Find current site
-              <a
-                className="underline-animated"
-                href={project.activeUrl}
-                target="_blank"
-              >
-                here.
-              </a>
-            </p>
-          ) : (
-            ""
-          )}
-        </div>
+            {project.hasActiveUrl ? (
+              <p className="appear-on-scroll">
+                Find current site
+                <a
+                  className="underline-animated"
+                  href={project.activeUrl}
+                  target="_blank"
+                >
+                  here.
+                </a>
+              </p>
+            ) : (
+              ""
+            )}
+          </div>
+        )}
       </div>
 
       <div className="project-image appear-on-scroll">
@@ -49,26 +62,27 @@ function Project({ project }) {
   );
 }
 
-function Projects() {
+function Projects({ modalAction }) {
+  const recentProjects = projects.slice().reverse();
+
   return (
     <section id="projects" className="projects-section">
       <div className="projects-text appear-on-scroll">
         <h2>Projects</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quis
-          reiciendis impedit at quod aliquam. Doloribus nemo enim quo sunt
-          voluptatem iste praesentium beatae, modi cupiditate at, officiis,
-          recusandae esse.
-        </p>
+        <p>Both Freelance & Personal Projects.</p>
       </div>
 
       <div className="projects">
-        {projects.map((project) => (
-          <Project key={project.id} project={project} />
+        {recentProjects.map((project) => (
+          <Project
+            key={project.id}
+            project={project}
+            modalAction={modalAction}
+          />
         ))}
       </div>
     </section>
   );
 }
 
-export default Projects;
+export { Projects, Project };

@@ -3,7 +3,7 @@ import "./Hero.css";
 
 function Hero({ windowSize, setWindowSize }) {
   return (
-    <section className="hero">
+    <section id="home" className="hero">
       <div className="hero-text fade-in">
         <h1>Caleb Anderson</h1>
         <p>A Full Stack Developer & Engineer</p>

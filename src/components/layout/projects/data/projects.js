@@ -19,7 +19,7 @@ const projects = [
     id: 0,
   },
   {
-    title: "Yu-Gi-Oh Card Collector",
+    title: "Card Collector",
     type: "Personal Project",
     content: [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta at ad possimus soluta velit voluptatum commodi id. In aspernatur repudiandae, fuga velit obcaecati laboriosam culpa dolorem nobis molestiae itaque dignissimos? ",

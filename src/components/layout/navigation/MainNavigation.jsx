@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import mainNavItems from "./data/mainNavItems";
 import "./MainNavigation.css";
 
+const NAV_HEIGHT = 70;
+
 function MainNavigation() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -26,12 +28,27 @@ function MainNavigation() {
 
   const isInTabOrder = isOpen || (isOpen && window.innerWidth < 1024);
 
+  const scrollToSection = function (id) {
+    const element = document.querySelector(id);
+    if (element) {
+      const topPosition = element.offsetTop - NAV_HEIGHT;
+      window.scrollTo({
+        top: topPosition,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <nav className="main-nav">
       <div className="nav-logo">
-        <a className="underline-animated" href="/CalebMckays/">
+        <button
+          className="underline-animated"
+          tabIndex={isInTabOrder ? "0" : "-1"}
+          onClick={() => scrollToSection("#home")}
+        >
           <span>CM</span>
-        </a>
+        </button>
       </div>
       <div className="nav-menu">
         <button className="nav-menu-button" onClick={toggle}>
@@ -47,14 +64,13 @@ function MainNavigation() {
         <ul>
           {mainNavItems.map((item) => (
             <li key={item.name}>
-              <a
+              <button
                 className="underline-animated"
-                href={item.link}
                 tabIndex={isInTabOrder ? "0" : "-1"}
-                onClick={toggle}
+                onClick={() => scrollToSection(item.link)}
               >
                 {item.name}
-              </a>
+              </button>
             </li>
           ))}
         </ul>

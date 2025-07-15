@@ -17,7 +17,8 @@
   margin-right: 10px;
 }
 
-.nav-logo a {
+.nav-logo a,
+.nav-logo button {
   font-family: "uppercut-angle", sans-serif;
   text-decoration: none;
   color: rgba(255, 255, 255, 1);
@@ -25,7 +26,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0;
+  padding: 5px 0;
 }
 
 .nav-menu {
@@ -71,9 +72,10 @@
 }
 
 .nav-menu button,
-.nav-links ul a {
+.nav-links ul a,
+.nav-links ul button {
   padding: 5px;
-  font-size: 25px;
+  font-size: 20px;
   text-decoration: none;
   color: rgba(255, 255, 255, 0.8);
   transition: color 0.2s ease-in-out;
@@ -82,7 +84,12 @@
   background-size: 100% 0.1em, 0 0.1em;
   background-position: 100% 100%, 0 100%;
   background-repeat: no-repeat;
-  transition: background-size 400ms;
+  transition: all 400ms;
+}
+
+button.underline-animated,
+button.underline-animated:focus {
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .nav-links ul a:visited {
@@ -92,7 +99,10 @@
 .nav-menu button:hover,
 .nav-menu button:focus,
 .nav-links ul a:hover,
-.nav-links ul a:focus {
+.nav-links ul a:focus,
+.nav-links ul button:hover,
+.nav-links ul button:focus,
+button.underline-animated:hover {
   color: rgba(235, 235, 235, 0.8);
   background-size: 0 0.1em, 100% 0.1em;
 }
