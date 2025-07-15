@@ -1,14 +1,6 @@
-import { useState } from "react";
-import ContactModal from "./ContactModal";
 import "./Contact.css";
 
-function Contact() {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleModal = function () {
-    setIsOpen(true);
-  };
-
+function Contact({ modalAction }) {
   return (
     <>
       <section id="contact" className="contact">
@@ -26,11 +18,10 @@ function Contact() {
             </p>
           </div>
           <div className="contact-button appear-on-scroll">
-            <button onClick={toggleModal}>Contact</button>
+            <button onClick={modalAction}>Get In Touch</button>
           </div>
         </div>
       </section>
-      <ContactModal shouldOpen={isOpen} setShouldOpen={setIsOpen} />
     </>
   );
 }
