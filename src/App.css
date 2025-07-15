@@ -59,6 +59,7 @@ button {
   align-items: center;
   padding: 12px 15px;
   background-color: #d40000;
+  color: rgba(255, 255, 255, 0.8);
   border: none;
   line-height: 1;
 }
@@ -67,6 +68,11 @@ button:hover {
   background-color: #c50035;
   cursor: pointer;
   transition: background-color 0.2s ease-in;
+}
+
+button:disabled {
+  background: rgba(150, 150, 150, 0.8);
+  cursor: default;
 }
 
 /**************

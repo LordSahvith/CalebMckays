@@ -1,21 +1,6 @@
-function Form({
-  action,
-  recipient,
-  handleRecipient,
-  subject,
-  handleSubject,
-  body,
-  handleBody,
-}) {
+function Form({ action, subject, handleSubject, body, handleBody }) {
   return (
     <form onSubmit={(event) => action(event)}>
-      <label htmlFor="message-recipient">Your Email:</label>
-      <input
-        id="message-recipient"
-        type="email"
-        value={recipient}
-        onInput={handleRecipient}
-      />
       <label htmlFor="message-subject">Topic:</label>
       <input
         id="message-subject"
@@ -33,7 +18,9 @@ function Form({
         cols={20}
       ></textarea>
 
-      <button type="submit">Submit</button>
+      <button type="submit" disabled>
+        Submit
+      </button>
     </form>
   );
 }
