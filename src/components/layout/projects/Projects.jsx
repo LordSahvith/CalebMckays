@@ -1,7 +1,7 @@
 import "./Projects.css";
 import projects from "./data/projects";
 
-function Project({ project }) {
+function Project({ project, modalAction, isModal = false }) {
   return (
     <div className="project checker-board">
       <div className="project-content">
@@ -18,28 +18,39 @@ function Project({ project }) {
           <p>{project.type}</p>
         </div>
 
-        <div className="project-description">
-          {project.content.map((desc) => (
-            <p key={desc} className="appear-on-scroll">
-              {desc}
-            </p>
-          ))}
+        {!isModal ? (
+          <div className="project-button appear-on-scroll">
+            <button
+              className="underline-animated"
+              onClick={() => modalAction(project.id)}
+            >
+              Learn More
+            </button>
+          </div>
+        ) : (
+          <div className="project-description">
+            {project.content.map((desc) => (
+              <p key={desc} className="appear-on-scroll">
+                {desc}
+              </p>
+            ))}
 
-          {project.hasActiveUrl ? (
-            <p className="appear-on-scroll">
-              Find current site
-              <a
-                className="underline-animated"
-                href={project.activeUrl}
-                target="_blank"
-              >
-                here.
-              </a>
-            </p>
-          ) : (
-            ""
-          )}
-        </div>
+            {project.hasActiveUrl ? (
+              <p className="appear-on-scroll">
+                Find current site
+                <a
+                  className="underline-animated"
+                  href={project.activeUrl}
+                  target="_blank"
+                >
+                  here.
+                </a>
+              </p>
+            ) : (
+              ""
+            )}
+          </div>
+        )}
       </div>
 
       <div className="project-image appear-on-scroll">
@@ -51,7 +62,7 @@ function Project({ project }) {
   );
 }
 
-function Projects() {
+function Projects({ modalAction }) {
   const recentProjects = projects.slice().reverse();
 
   return (
@@ -63,11 +74,15 @@ function Projects() {
 
       <div className="projects">
         {recentProjects.map((project) => (
-          <Project key={project.id} project={project} />
+          <Project
+            key={project.id}
+            project={project}
+            modalAction={modalAction}
+          />
         ))}
       </div>
     </section>
   );
 }
 
-export default Projects;
+export { Projects, Project };
