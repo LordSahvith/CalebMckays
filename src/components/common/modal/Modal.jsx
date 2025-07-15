@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import "./Modal.css";
 
 function Modal({ shouldOpen, setShouldOpen, children }) {
@@ -5,9 +6,24 @@ function Modal({ shouldOpen, setShouldOpen, children }) {
     setShouldOpen(false);
   };
 
+  useEffect(() => {
+    const handleEscapeKey = function (event) {
+      if (event.key.toLowerCase() === "escape") {
+        setShouldOpen(false);
+      }
+    };
+
+    window.addEventListener("keydown", handleEscapeKey);
+
+    // Cleanup on component unmount
+    return () => {
+      window.removeEventListener("keydown", handleEscapeKey);
+    };
+  });
+
   return (
     <section
-      onFocus={shouldOpen}
+      autoFocus={shouldOpen}
       className={`modal ${shouldOpen ? "open" : ""}`}
     >
       <div className="close-modal">
