@@ -10,16 +10,16 @@ function About() {
 
   return (
     <section id="about" className="about checker-board">
-      <div className="about-text appear-on-scroll">
-        <h2>About</h2>
-        <p>
+      <div className="about-text">
+        <h2 className="appear-on-scroll">About</h2>
+        <p className="appear-on-scroll">
           I'm Caleb Anderson a Full Stack Devloper & Engineer with
           {` ${experienceYears}`} years of experience building and maintaining
           Websites on a production level, with the main focus of the past
           {` ${eCommerceYears}`} years being B2C eCommerce and have achieved my
           certification as a Salesforce Commerce Cloud Developer.
         </p>
-        <p>
+        <p className="appear-on-scroll">
           My passion is for the perfect blend of art & science, whether that's
           with Web Development, Game Development, Music or anything else that
           involves both art & science. For the past
@@ -28,7 +28,7 @@ function About() {
           Apps, Games, and eventually, Music, and as a life long student, there
           is no end in sight.
         </p>
-        <p>
+        <p className="appear-on-scroll">
           If you are looking for a new addition for your team and/or love the
           work you're seeing? Then don't hesitate to reach out! I'm always open
           to new fun ideas or even new clients that want a new inovative site!!

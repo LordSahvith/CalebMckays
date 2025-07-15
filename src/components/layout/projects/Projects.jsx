@@ -4,8 +4,8 @@ import projects from "./data/projects";
 function Project({ project }) {
   return (
     <div className="project checker-board">
-      <div className="project-content appear-on-scroll">
-        <div className="project-title">
+      <div className="project-content">
+        <div className="project-title appear-on-scroll">
           <h3>
             <a
               className="underline-animated"
@@ -20,11 +20,13 @@ function Project({ project }) {
 
         <div className="project-description">
           {project.content.map((desc) => (
-            <p key={desc}>{desc}</p>
+            <p key={desc} className="appear-on-scroll">
+              {desc}
+            </p>
           ))}
 
           {project.hasActiveUrl ? (
-            <p>
+            <p className="appear-on-scroll">
               Find current site
               <a
                 className="underline-animated"
