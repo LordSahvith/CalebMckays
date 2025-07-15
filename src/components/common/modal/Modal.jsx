@@ -6,7 +6,10 @@ function Modal({ shouldOpen, setShouldOpen, children }) {
   };
 
   return (
-    <section className={`modal ${shouldOpen ? "open" : ""}`}>
+    <section
+      onFocus={shouldOpen}
+      className={`modal ${shouldOpen ? "open" : ""}`}
+    >
       <div className="close-modal">
         <button className="close-button" onClick={closeModal}>
           <span className="close-icon">
@@ -16,19 +19,21 @@ function Modal({ shouldOpen, setShouldOpen, children }) {
         </button>
       </div>
 
-      {children ? (
-        children
-      ) : (
-        <div className="modal-content">
-          <h2>Modal</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis
-            corrupti doloribus necessitatibus consequuntur vitae ratione nostrum
-            dolorum delectus enim iusto ut sed sunt dignissimos eaque, et
-            numquam consequatur, mollitia in?
-          </p>
-        </div>
-      )}
+      <div className="modal-content">
+        {children ? (
+          children
+        ) : (
+          <div className="modal-content">
+            <h2>Modal</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis
+              corrupti doloribus necessitatibus consequuntur vitae ratione
+              nostrum dolorum delectus enim iusto ut sed sunt dignissimos eaque,
+              et numquam consequatur, mollitia in?
+            </p>
+          </div>
+        )}
+      </div>
     </section>
   );
 }

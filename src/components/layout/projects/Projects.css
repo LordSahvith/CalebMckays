@@ -5,7 +5,6 @@
 .projects-text {
   max-width: 700px;
   margin-bottom: 20px;
-  text-align: center;
 }
 
 .projects {
@@ -18,10 +17,6 @@
 
 .project {
   margin-bottom: 20px;
-}
-
-.project-title {
-  text-align: center;
 }
 
 .project-image a {
@@ -56,5 +51,11 @@
 
   .carousel-root {
     max-width: 75%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .projects-text {
+    text-align: center;
   }
 }
