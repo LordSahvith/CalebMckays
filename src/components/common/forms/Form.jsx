@@ -18,7 +18,9 @@ function Form({ action, subject, handleSubject, body, handleBody }) {
         cols={20}
       ></textarea>
 
-      <button type="submit">Submit</button>
+      <button type="submit" disabled>
+        Submit
+      </button>
     </form>
   );
 }

@@ -45,6 +45,16 @@ function ContactModal({ shouldOpen, setShouldOpen }) {
         body={body}
         handleBody={handleBody}
       />
+
+      <p>
+        Reach me on{" "}
+        <a
+          className="underline-animated"
+          href="https://www.linkedin.com/in/thecalebanderson/"
+        >
+          LinkedIn
+        </a>
+      </p>
     </Modal>
   );
 }

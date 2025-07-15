@@ -70,6 +70,11 @@ button:hover {
   transition: background-color 0.2s ease-in;
 }
 
+button:disabled {
+  background: rgba(150, 150, 150, 0.8);
+  cursor: default;
+}
+
 /**************
 *    Links    *
 **************/
