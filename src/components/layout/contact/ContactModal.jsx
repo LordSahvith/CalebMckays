@@ -37,7 +37,7 @@ function ContactModal({ shouldOpen, setShouldOpen }) {
   return (
     <Modal shouldOpen={shouldOpen} setShouldOpen={setShouldOpen}>
       <h2>Contact Form</h2>
-      <p>* Still in development</p>
+      <p style={{ color: "#d40000" }}>* Still in development</p>
       <Form
         action={handleSubmit}
         subject={subject}
@@ -47,7 +47,7 @@ function ContactModal({ shouldOpen, setShouldOpen }) {
       />
 
       <p>
-        Reach me on{" "}
+        Reach me on
         <a
           className="underline-animated"
           href="https://www.linkedin.com/in/thecalebanderson/"

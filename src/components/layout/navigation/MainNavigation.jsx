@@ -26,7 +26,7 @@ function MainNavigation() {
     };
   });
 
-  const isInTabOrder = isOpen || (isOpen && window.innerWidth < 1024);
+  const isInTabOrder = isOpen || window.innerWidth >= 1024;
 
   const scrollToSection = function (id) {
     const element = document.querySelector(id);
@@ -41,17 +41,24 @@ function MainNavigation() {
 
   return (
     <nav className="main-nav">
+      <button className="sr-only" onClick={() => scrollToSection("#about")}>
+        Skip to Content
+      </button>
       <div className="nav-logo">
         <button
+          title="Home Button"
           className="underline-animated"
-          tabIndex={isInTabOrder ? "0" : "-1"}
           onClick={() => scrollToSection("#home")}
         >
           <span>CM</span>
         </button>
       </div>
       <div className="nav-menu">
-        <button className="nav-menu-button" onClick={toggle}>
+        <button
+          title="Hamburger Menu Button"
+          className="nav-menu-button"
+          onClick={toggle}
+        >
           <span className="sr-only">&#9776;</span>
           <div className={`menu-icon ${isOpen ? "show" : ""}`}>
             <span className="bar bar-top"></span>
@@ -65,6 +72,7 @@ function MainNavigation() {
           {mainNavItems.map((item) => (
             <li key={item.name}>
               <button
+                title={item.name}
                 className="underline-animated"
                 tabIndex={isInTabOrder ? "0" : "-1"}
                 onClick={() => scrollToSection(item.link)}
