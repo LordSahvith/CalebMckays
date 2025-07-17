@@ -140,7 +140,7 @@ button.underline-animated:hover {
 }
 
 .menu-icon.show .bar-middle {
-  transform: translateX(200%);
+  transform: translateX(250%);
 }
 
 .menu-icon.show .bar-bottom {
