@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import "./Modal.css";
 
-function Modal({ shouldOpen, setShouldOpen, children }) {
+function Modal({ modalName = "", shouldOpen, setShouldOpen, children }) {
   const closeModal = function () {
     setShouldOpen(false);
   };
@@ -21,10 +21,12 @@ function Modal({ shouldOpen, setShouldOpen, children }) {
     };
   }, []);
 
+  console.log(modalName);
+
   return (
     <section
       autoFocus={shouldOpen}
-      className={`modal ${shouldOpen ? "open" : ""}`}
+      className={`modal ${modalName} ${shouldOpen ? "open" : ""}`}
     >
       <div className="close-modal">
         <button className="close-button" onClick={closeModal}>

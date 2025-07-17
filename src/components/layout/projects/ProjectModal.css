@@ -1,0 +1,21 @@
+.project-modal.modal.open {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+}
+
+.project-modal .modal-content {
+  justify-content: flex-start;
+}
+
+.project-modal .checker-board {
+  flex-direction: column;
+  padding-bottom: 40px;
+}
+
+@media screen and (min-width: 1024px) {
+  .project-modal.modal.open {
+    padding: 40px;
+  }
+}
