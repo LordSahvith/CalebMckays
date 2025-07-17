@@ -26,7 +26,7 @@ function MainNavigation() {
     };
   });
 
-  const isInTabOrder = isOpen || (isOpen && window.innerWidth < 1024);
+  const isInTabOrder = isOpen || window.innerWidth >= 1024;
 
   const scrollToSection = function (id) {
     const element = document.querySelector(id);
@@ -44,7 +44,6 @@ function MainNavigation() {
       <div className="nav-logo">
         <button
           className="underline-animated"
-          tabIndex={isInTabOrder ? "0" : "-1"}
           onClick={() => scrollToSection("#home")}
         >
           <span>CM</span>
