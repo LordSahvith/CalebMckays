@@ -10,12 +10,6 @@
   box-sizing: border-box;
 }
 
-@font-face {
-  font-family: "uppercut-angle", "ltc-goudy-thirty", Helvetica, Arial,
-    sans-serif;
-  src: url("https://use.typekit.net/jlu6tvf.css");
-}
-
 html {
   font-family: "ltc-goudy-thirty", Helvetica, Arial, sans-serif;
   line-height: 1.5;
