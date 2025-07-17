@@ -41,6 +41,9 @@ function MainNavigation() {
 
   return (
     <nav className="main-nav">
+      <button className="sr-only" onClick={() => scrollToSection("#about")}>
+        Skip to Content
+      </button>
       <div className="nav-logo">
         <button
           className="underline-animated"

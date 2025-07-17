@@ -39,7 +39,9 @@ function About({ modalAction }) {
           </p>
         </div>
         <div className="contact-button appear-on-scroll">
-          <button onClick={modalAction}>Get In Touch</button>
+          <button id="about-contact-button" onClick={modalAction}>
+            Get In Touch
+          </button>
         </div>
       </div>
       <div className="about-image appear-on-scroll">

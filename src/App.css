@@ -1,5 +1,13 @@
 .sr-only {
-  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-200%);
+  transition: transform 400ms;
+}
+
+.sr-only:focus {
+  transform: translateY(50%);
 }
 
 /****************
