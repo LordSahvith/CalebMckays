@@ -1,8 +1,19 @@
 .contact {
   background: #343434;
-  min-height: auto;
+  min-height: calc(50vh - 70px);
 }
 
 .contact-button {
   margin-top: 15px;
+}
+
+.contact-button button {
+  background: none;
+  border: 2px #d40000 solid;
+  transition: all 200ms ease-in-out;
+}
+
+.contact-button button:hover,
+.contact-button button:focus {
+  background: #670000;
 }
